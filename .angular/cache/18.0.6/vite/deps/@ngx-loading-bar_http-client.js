@@ -1,12 +1,12 @@
 import {
-  LoadingBarModule,
-  LoadingBarService
-} from "./chunk-SHSYM4EB.js";
-import {
   HTTP_INTERCEPTORS,
   HttpClientModule,
   HttpContextToken
 } from "./chunk-3UJ37KUT.js";
+import {
+  LoadingBarModule,
+  LoadingBarService
+} from "./chunk-SHSYM4EB.js";
 import "./chunk-55JG6BXV.js";
 import {
   Injectable,
