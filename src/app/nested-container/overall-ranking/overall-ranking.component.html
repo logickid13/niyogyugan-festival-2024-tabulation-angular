@@ -1,0 +1,62 @@
+<ngx-loading-bar color="#f86a34" height="5px" ref="http" ref="http"></ngx-loading-bar>
+<div class="max-w-full h-auto bg-white rounded-md">
+    <div class="block mx-auto text-center py-8">
+    <span class="page-title">LEADERBOARD</span>
+    </div>
+    <div class="block mx-auto text-center">
+        <mat-progress-bar [mode]="load_bar_mode" *ngIf="isLoading"></mat-progress-bar>
+        <div class="grid grid-cols-1 justify-items-stretch md:mx-14 lg:mx-16 xl:mx-16 pb-10">
+            <div *ngFor="let item of leaderboards_list; let i = index">
+                <div class="max-w-full rounded-md ranking-container-bg my-4" [ngClass]="{ 'pb-5': item.isOpen }">
+                    <div class="grid grid-cols-4 justify-items-stretch py-5 px-10">
+                        <div class="justify-self-start col-span-2 content-center">
+                            <span class="rank-no-text text-2xl lg:text-3xl xl:text-4xl mr-2">
+                                {{ i+1 }}
+                            </span>
+                            <span class="rank-municipality-text text-2xl lg:text-3xl xl:text-4xl mx-2">
+                                {{ item.municipality_name }}
+                            </span>
+                        </div>
+                        <div class="content-center block lg:hidden xl:hidden">
+                            <span class="rank-no-text text-2xl lg:text-3xl xl:text-3xl mx-2">
+                                {{ item.total | number }}
+                            </span>
+                        </div>
+                        <div class="content-center block lg:hidden xl:hidden">
+                            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" class="rank-no-text mx-2" (click)="toggleCollapse(item,i)">
+                                <mat-icon *ngIf="!item.isOpen">arrow_drop_down</mat-icon>
+                                <mat-icon *ngIf="item.isOpen">arrow_drop_up</mat-icon>
+                            </button>
+                        </div>
+                        <div class="justify-self-end col-span-2 content-center hidden lg:block xl:block">
+                            <span class="rank-no-text text-2xl lg:text-3xl xl:text-3xl mx-2">
+                                {{ item.total | number }}
+                            </span>
+                            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" class="rank-no-text mx-2" (click)="toggleCollapse(item,i)">
+                                <mat-icon *ngIf="!item.isOpen">arrow_drop_down</mat-icon>
+                                <mat-icon *ngIf="item.isOpen">arrow_drop_up</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="max-w-full rounded-md ranking-container-bg mx-20" *ngIf="item.isOpen">
+                        <mat-progress-bar [mode]="load_bar_mode" *ngIf="contestResultsLoading"></mat-progress-bar>
+                        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3" *ngIf="!contestResultsLoading">
+                            <div *ngFor="let c of contest_municipality_results; let i = index">
+                                <div class="grid grid-cols-6">
+                                    <div class="text-base justify-self-start col-span-5 text-left">
+                                        <span class="contest-text">{{ c.contest_name }}</span>
+                                    </div>
+                                    <div class="text-base justify-self-end">
+                                        <span class="contest-score-text">{{ c.score }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

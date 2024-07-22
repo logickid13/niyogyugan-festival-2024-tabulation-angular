@@ -1,0 +1,94 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the theme object.
+$niyogyugan_festival_tabulation-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  density: (
+    scale: 0,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes($niyogyugan_festival_tabulation-theme);
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($niyogyugan_festival_tabulation-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($niyogyugan_festival_tabulation-theme);
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url('../public/assets/fonts/Bebas_Neue_Regular/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Camphor W01 Heavy";
+  src: url('../public/assets/fonts/Camphor_W01_Heavy/web_fonts/7cbdcf23b48549bbb15b3e920e7316ca.eot'),
+  url('../public/assets/fonts/Camphor_W01_Heavy/web_fonts/7cbdcf23b48549bbb15b3e920e7316ca.eot?#iefix') format('embedded-opentype'),
+  url('../public/assets/fonts/Camphor_W01_Heavy/web_fonts/7cbdcf23b48549bbb15b3e920e7316ca.woff') format('woff'),
+  url('../public/assets/fonts/Camphor_W01_Heavy/web_fonts/7cbdcf23b48549bbb15b3e920e7316ca.woff2') format('woff2'),
+  url('../public/assets/fonts/Camphor_W01_Heavy/web_fonts/Camphor\ W01\ Heavy.ttf') format('truetype'),
+  url('../public/assets/fonts/Camphor_W01_Heavy/web_fonts/7cbdcf23b48549bbb15b3e920e7316ca.svg# Camphor W01 Heavy') format('svg');
+}
+
+@font-face {
+  font-family: "Camphor W01 Bold";
+  src: url('../public/assets/fonts/Camphor_W01_Bold/web_fonts/009603073ddf1e34906b33601671b0fb.eot'),
+  url('../public/assets/fonts/Camphor_W01_Bold/web_fonts/009603073ddf1e34906b33601671b0fb.eot?#iefix') format('embedded-opentype'),
+  url('../public/assets/fonts/Camphor_W01_Bold/web_fonts/009603073ddf1e34906b33601671b0fb.woff') format('woff'),
+  url('../public/assets/fonts/Camphor_W01_Bold/web_fonts/009603073ddf1e34906b33601671b0fb.woff2') format('woff2'),
+  url('../public/assets/fonts/Camphor_W01_Bold/web_fonts/Camphor\ W01\ Bold.ttf') format('truetype'),
+  url('../public/assets/fonts/Camphor_W01_Bold/web_fonts/009603073ddf1e34906b33601671b0fb.svg# Camphor W01 Bold') format('svg');
+}
+
+@font-face {
+  font-family: "Camphor W01 Regular";
+  src: url('../public/assets/fonts/Camphor_W01_Regular/web_fonts/22f912b4b10a938d5f28b7fe79ed7466.eot'),
+  url('../public/assets/fonts/Camphor_W01_Regular/web_fonts/22f912b4b10a938d5f28b7fe79ed7466.eot?#iefix') format('embedded-opentype'),
+  url('../public/assets/fonts/Camphor_W01_Regular/web_fonts/22f912b4b10a938d5f28b7fe79ed7466.woff') format('woff'),
+  url('../public/assets/fonts/Camphor_W01_Regular/web_fonts/22f912b4b10a938d5f28b7fe79ed7466.woff2') format('woff2'),
+  url('../public/assets/fonts/Camphor_W01_Regular/web_fonts/Camphor\ W01\ Regular.ttf') format('truetype'),
+  url('../public/assets/fonts/Camphor_W01_Regular/web_fonts/22f912b4b10a938d5f28b7fe79ed7466.svg# Camphor W01 Regular') format('svg');
+}
+
+@font-face {
+  font-family: "Camphor W01 Medium";
+  src: url('../public/assets/fonts/Camphor_W01_Medium/web_fonts/4dbaa3adcaa1e0b2b87ff13dabcf5bfb.eot'),
+  url('../public/assets/fonts/Camphor_W01_Medium/web_fonts/4dbaa3adcaa1e0b2b87ff13dabcf5bfb.eot?#iefix') format('embedded-opentype'),
+  url('../public/assets/fonts/Camphor_W01_Medium/web_fonts/4dbaa3adcaa1e0b2b87ff13dabcf5bfb.woff') format('woff'),
+  url('../public/assets/fonts/Camphor_W01_Medium/web_fonts/4dbaa3adcaa1e0b2b87ff13dabcf5bfb.woff2') format('woff2'),
+  url('../public/assets/fonts/Camphor_W01_Medium/web_fonts/Camphor\ W01\ Medium.ttf') format('truetype'),
+  url('../public/assets/fonts/Camphor_W01_Medium/web_fonts/4dbaa3adcaa1e0b2b87ff13dabcf5bfb.svg# Camphor W01 Medium') format('svg');
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url('../public/assets/fonts/Anton_Regular/Anton-Regular.ttf') format('truetype');
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f6652e; }
+

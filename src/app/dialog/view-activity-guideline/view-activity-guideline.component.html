@@ -1,0 +1,25 @@
+<div class="grid grid-rows-1 grid-cols-3 mt-5 mb-3">
+	<div></div>
+	<div>
+	</div>
+	<div class="px-3">
+		<div class="flex justify-end">
+			<button mat-mini-fab color="accent" (click)="closeDialog()"><mat-icon>close</mat-icon></button>
+		</div>
+	</div>
+</div>
+<div class="flex justify-center text-center text-4xl page-title my-5">
+	{{ c_name }}
+</div>
+<mat-dialog-content>
+	<ngx-extended-pdf-viewer 
+	[src]="file_src" 
+	[height]="'auto'" 
+	[mobileFriendlyZoom]="'100%'" 
+	[(page)]="redirectPage"
+	[backgroundColor]="'#5c5c5c'"
+	[theme]="'dark'"
+	[textLayer]="true"
+	[showHandToolButton]="true"
+	></ngx-extended-pdf-viewer>
+</mat-dialog-content>

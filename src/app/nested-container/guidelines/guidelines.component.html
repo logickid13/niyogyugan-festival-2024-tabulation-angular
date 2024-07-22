@@ -1,0 +1,31 @@
+<ngx-loading-bar color="#f86a34" height="5px" ref="http" ref="http"></ngx-loading-bar>
+<div class="max-w-full h-auto bg-white rounded-md">
+    <div class="block mx-auto text-center py-8">
+        <span class="page-title">GUIDELINES</span>
+    </div>
+    <div class="block mx-auto text-center">
+        <mat-progress-bar [mode]="load_bar_mode" *ngIf="isLoading"></mat-progress-bar>
+        <div class="grid grid-cols-1 content-center md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 auto-rows-fr gap-10 px-5 pb-10 sm:px-12 md:px-12 lg:px-12 xl:px-16">
+            <div *ngFor="let item of guidelines_list; let i = index" class="shadow-md hover:shadow-lg" (click)="viewGuideline(item)">
+                <div class="image-container">
+                    <img class="max-w-full h-auto rounded-t-lg event-icon" [src]="item.a_icon" alt="" />
+                    <div class="middle">
+                        <div class="image-container-text">
+                            <mat-icon class="text-2xl">visibility</mat-icon>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="flex xl:hidden lg:hidden justify-center">
+                    <button class="w-full text-lg px-4 pt-2 mx-0 outline-none rounded-lg bg-slate-200 text-gray-600">
+                        <span class="inline-flex"><mat-icon>library_books</mat-icon> View Guideline</span>
+                    </button>
+                </div> -->
+                <div class="flex justify-center">
+                    <button class="w-full text-lg px-4 pt-2 mx-0 outline-none rounded-br rounded-bl bg-slate-200 text-gray-600">
+                        <span class="inline-flex"><mat-icon>library_books</mat-icon> View Guidelines</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

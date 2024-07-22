@@ -1,0 +1,86 @@
+.overall-bg {
+    background-image: url('../../../public/assets/tabulation_bg.png'); 
+    // background-image: linear-gradient(to bottom, transparent, #ff9161), url("../../../public/assets/tabulation_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.niyogyugan-btn {
+    background: #fc560c;
+    color: #ffffff;
+    font-family: "Camphor W01 Heavy";
+}
+
+.niyogyugan-btn:hover {
+    background: #9ca3af;
+    color: #374151;
+}
+
+.niyogyugan-btn-active {
+    background: #9ca3af;
+    color: #374151;
+}
+
+.schedule-btn {
+    background: #7e23f4;
+    color: #ffffff;
+    font-family: "Camphor W01 Heavy";
+}
+
+.schedule-btn:hover {
+    background: #9ca3af;
+    color: #374151;
+}
+
+.schedule-btn-active {
+    background: #9ca3af;
+    color: #374151;
+}
+
+.leaderboard-btn {
+    background: #066fff;
+    color: #ffffff;
+    font-family: "Camphor W01 Heavy";
+}
+
+.leaderboard-btn:hover {
+    background: #9ca3af;
+    color: #374151;
+}
+
+.leaderboard-btn-active {
+    background: #9ca3af;
+    color: #374151;
+}
+
+.list-of-activities-btn {
+    background: #0daa67;
+    color: #ffffff;
+    font-family: "Camphor W01 Heavy";
+}
+
+.list-of-activities-btn:hover {
+    background: #9ca3af;
+    color: #374151;
+}
+
+.list-of-activities-btn-active {
+    background: #9ca3af;
+    color: #374151;
+}
+
+.guidelines-btn {
+    background: #feb006;
+    color: #ffffff;
+    font-family: "Camphor W01 Heavy";
+}
+
+.guidelines-btn:hover {
+    background: #9ca3af;
+    color: #374151;
+}
+
+.guidelines-btn-active {
+    background: #9ca3af;
+    color: #374151;
+}
