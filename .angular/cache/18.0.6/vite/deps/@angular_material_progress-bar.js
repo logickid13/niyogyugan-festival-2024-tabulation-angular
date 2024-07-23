@@ -1,6 +1,6 @@
 import {
   MatCommonModule
-} from "./chunk-DHICHSER.js";
+} from "./chunk-A7VPK4Q4.js";
 import {
   DOCUMENT
 } from "./chunk-55JG6BXV.js";
@@ -39,8 +39,8 @@ import {
   ɵɵstyleProp,
   ɵɵtemplate
 } from "./chunk-ASFWULK7.js";
-import "./chunk-LMFWYZLC.js";
 import "./chunk-KT3RQDJZ.js";
+import "./chunk-LMFWYZLC.js";
 import "./chunk-RVQ3RH6Y.js";
 
 // node_modules/@angular/material/fesm2022/progress-bar.mjs

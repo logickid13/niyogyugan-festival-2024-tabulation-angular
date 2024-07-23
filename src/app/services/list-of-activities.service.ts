@@ -36,7 +36,7 @@ export class ListOfActivitiesService {
   }
 
   loadActivities(): Observable<ListOfActivities[]> {
-    return this.httpClient.get<ListOfActivities[]>(API_URL+'api/activities/loadActivities', httpOptions)
+    return this.httpClient.get<ListOfActivities[]>(API_URL+'activities/loadActivities', httpOptions)
    .pipe(
      catchError(this.handleError)
    )

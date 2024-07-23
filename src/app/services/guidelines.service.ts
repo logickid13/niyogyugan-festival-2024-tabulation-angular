@@ -36,7 +36,7 @@ export class GuidelinesService {
   }
 
   loadGuidelines(): Observable<Guidelines[]> {
-    return this.httpClient.get<Guidelines[]>(API_URL+'api/guidelines/loadGuidelines', httpOptions)
+    return this.httpClient.get<Guidelines[]>(API_URL+'guidelines/loadGuidelines', httpOptions)
     .pipe(
      catchError(this.handleError)
     )

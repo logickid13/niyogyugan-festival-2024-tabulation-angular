@@ -87,7 +87,7 @@
                   "with": "src/environments/environment.ts"
                 }
               ],
-              "baseHref": "https://niyogyugan.quezon.gov.ph/"
+              "baseHref": "https://niyogyugan.quezonsystems.com/"
             },
             "development": {
               "optimization": false,

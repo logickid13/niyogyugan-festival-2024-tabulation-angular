@@ -1,0 +1,32 @@
+<div class="flex h-screen justify-center items-start mt-10">
+	<div class="container max-w-full">
+		<div class="block mx-auto max-w-lg mb-10">
+			<mat-card>
+		  		<!-- <mat-card-header class="flex justify-center items-center text-lg font-semibold">
+		   			<mat-card-title>LOGIN</mat-card-title>
+		  		</mat-card-header> -->
+		  		<br>
+		  		<mat-card-content>
+		  			<form [formGroup]="loginForm" (submit)="login()" novalidate>
+			    		<mat-form-field appearance="fill" class="w-max">
+			    			<mat-label>Employee ID No.</mat-label>
+			    			<input matInput type="text" placeholder="Employee ID No." id="username" name="username" formControlName="username" autocomplete="on" required>
+			    			<mat-error *ngIf="getControl.username.errors?.required">Field is Required</mat-error>
+			    			<mat-error *ngIf="getControl.username.errors?.pattern">Only numerical values are allowed</mat-error>
+			  			</mat-form-field>
+			  			<br><br>
+			  			<mat-form-field appearance="fill" class="w-max">
+			    			<mat-label>Password</mat-label>
+			    			<input matInput type="password" placeholder="password" id="password" name="password" formControlName="password" autocomplete="on" required>
+			    			<mat-error *ngIf="getControl.password.errors?.required">Field is Required</mat-error>
+			  			</mat-form-field>
+			  			<br><br>
+			  			<div class="flex justify-center">
+			  				<button mat-raised-button class="mat-primary" [disabled]="loginForm.invalid">Submit</button>
+			  			</div>
+		  			</form>
+		  		</mat-card-content>
+			</mat-card>
+		</div>
+	</div>
+</div>

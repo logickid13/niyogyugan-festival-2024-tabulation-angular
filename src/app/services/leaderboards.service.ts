@@ -36,14 +36,14 @@ export class LeaderboardsService {
   }
 
   loadLeaderboard(): Observable<Leaderboards[]> {
-    return this.httpClient.get<Leaderboards[]>(API_URL+'api/leaderboards/load', httpOptions)
+    return this.httpClient.get<Leaderboards[]>(API_URL+'leaderboards/load', httpOptions)
     .pipe(
      catchError(this.handleError)
     )
   }
 
   getContestResult(s_munic: string): Observable<ContestScore[]> {
-    return this.httpClient.post<ContestScore[]>(API_URL+'api/leaderboards/loadContestResultsPerMunicipality', { munic_id: s_munic }, httpOptions)
+    return this.httpClient.post<ContestScore[]>(API_URL+'leaderboards/loadContestResultsPerMunicipality', { munic_id: s_munic }, httpOptions)
     .pipe(
      catchError(this.handleError)
     )
