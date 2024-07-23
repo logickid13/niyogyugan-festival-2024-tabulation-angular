@@ -37,7 +37,7 @@ export class ActivitiesComponent implements OnInit {
 
             this.list_of_activities.map(el => {
               let image_file = el.a_icon;
-              let final_url = API_URL+"api/public/files/list-of-activities-icons/"+image_file;
+              let final_url = API_URL+"public/files/list-of-activities-icons/"+image_file;
               el.a_icon = final_url;
             });
 

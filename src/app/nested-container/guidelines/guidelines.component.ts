@@ -48,8 +48,8 @@ export class GuidelinesComponent implements OnInit {
             let image_file = el.a_icon;
             let guidelines_file = el.a_guidelines;
 
-            let final_url = API_URL+"api/public/files/list-of-activities-icons/"+image_file;
-            let final_guidelines_url = API_URL+"api/public/files/guidelines/"+guidelines_file;
+            let final_url = API_URL+"public/files/list-of-activities-icons/"+image_file;
+            let final_guidelines_url = API_URL+"public/files/guidelines/"+guidelines_file;
 
             el.a_icon = final_url;
             el.a_guidelines = final_guidelines_url;
