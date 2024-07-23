@@ -72,7 +72,7 @@ export class AuthenticateService {
   }
 
   isLoggedIn(): Observable<any> {
-    return this.httpClient.get<any>(API_URL+'api/auth/isLoggedIn', httpOptions)
+    return this.httpClient.get<any>(API_URL+'auth/isLoggedIn', httpOptions)
     .pipe(catchError(this.handleError))
   }
 
