@@ -11,6 +11,7 @@ import { AuthenticateService } from '../services/authenticate.service';
 import { Router } from '@angular/router';
 import { Subscription, throwError } from 'rxjs';
 import { Login } from '../models/login.model';
+import { environment } from '../../environments/environment.development';
 
 @Component({
   selector: 'app-login',
@@ -36,6 +37,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     isLogin = false;
     public response_status = '';
     isLoggedInCheck?: Subscription;
+    public system_version = environment.appVersion;
 
     constructor(
       public formBuilder: FormBuilder,
