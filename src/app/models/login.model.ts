@@ -22,6 +22,12 @@ export interface BackendSessionCheck {
 	fullname: string;
 }
 
+export interface UpdateProfilePic {
+	res: string;
+	response: string;
+	profile_pic: string;
+}
+
 export interface UpdatePassword {
 	uid: string;
 	password: string;

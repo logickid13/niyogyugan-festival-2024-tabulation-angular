@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 import { Subscription, throwError } from 'rxjs';
 import { Login } from '../models/login.model';
 import { ToastrService } from 'ngx-toastr';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { environment } from '../../environments/environment.development';
 
 @Component({
@@ -26,7 +27,8 @@ import { environment } from '../../environments/environment.development';
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
-    MatDividerModule
+    MatDividerModule,
+    LoadingBarHttpClientModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'

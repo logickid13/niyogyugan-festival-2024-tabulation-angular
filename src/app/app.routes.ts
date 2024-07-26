@@ -12,6 +12,10 @@ export const routes: Routes = [
         component: LoginComponent
     },
     {
+        path: 'dashboard',
+        loadChildren: () => import('../app/dashboard/dashboard.routes').then(m => m.DASHBOARD_ROUTES)
+    },
+    {
         path: '**',
         component: PageNotFoundComponent
     }

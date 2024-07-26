@@ -1,0 +1,69 @@
+<ngx-loading-bar color="#286bae" height="5px" ref="http"></ngx-loading-bar>
+<mat-toolbar class="toolbar-bg">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" *ngIf="sidenav.mode === 'over'"
+        (click)="sidenav.toggle()">
+        <!-- <mat-icon class="text-blue-700" *ngIf="!sidenav.opened">menu</mat-icon>
+        <mat-icon class="text-blue-700" *ngIf="sidenav.opened">close</mat-icon> -->
+        <mat-icon class="text-white" *ngIf="!sidenav.opened">menu</mat-icon>
+        <mat-icon class="text-white" *ngIf="sidenav.opened">close</mat-icon>
+    </button>
+    <!-- <img class="w-11 h-11 relative flex justify-center items-center mr-2 invisible md:visible lg:visible xl:visible" src="images/angular_icon_logo.png" alt="Rounded avatar"> -->
+    <!-- <img class="w-11 h-11 relative flex justify-center items-center mr-2" src="assets/niyogyugan_tabulation_logo.png" alt="Rounded avatar"> -->
+    <span class="invisible md:visible lg:visible xl:visible text-lg font-weight-semibold text-white">
+        Overall Points Scoring
+    </span>
+    <span class="flex-auto"></span>
+    <span class="flex justify-between items-center font-weight-semibold">
+        <img class="w-12 h-12 relative flex justify-center items-center rounded-full mr-2" [src]="current_profile_pic" alt="Rounded avatar">
+        <span class="text-lg text-white">{{ display_fullname }}</span>
+    </span>
+    <button mat-button [matMenuTriggerFor]="menu">
+        <!-- <span class="text-blue-700 font-weight-semibold">
+            <mat-icon class="text-md">arrow_drop_down</mat-icon>
+        </span> -->
+        <span class="font-weight-semibold">
+            <mat-icon class="text-md text-white">arrow_drop_down</mat-icon>
+        </span>
+    </button>
+    <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
+        <button mat-menu-item (click)="updatePasswordDialog()" *ngIf="display_permission.includes(1.02)">
+            <mat-icon>edit</mat-icon>
+            Change Password
+        </button>
+        <button mat-menu-item (click)="profilePICDialog()" *ngIf="display_permission.includes(1.01)">
+        <mat-icon>portrait</mat-icon>
+        Update Profile Picture
+        </button>
+        <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            Logout
+        </button>
+    </mat-menu>
+</mat-toolbar>
+<mat-sidenav-container class="app-container">
+    <mat-sidenav #sidenav class="app-sidenav">
+            <!-- <mat-list-item routerLink="#">
+                <mat-icon>dashboard</mat-icon>Dashboard
+            </mat-list-item> -->
+            <mat-nav-list>
+                <a mat-list-item [routerLink]="['/dashboard/home']" routerLinkActive="active-link" *ngIf="display_permission.includes(1.03)">
+                    <mat-icon matListItemIcon>home</mat-icon>
+                    Dashboard
+                </a>
+                <a mat-list-item [routerLink]="['/dashboard/accounts']" routerLinkActive="active-link" *ngIf="display_permission.includes(3)">
+                    <mat-icon matListItemIcon>account_circle</mat-icon>
+                    Accounts
+                </a>
+                <a mat-list-item [routerLink]="['/dashboard/activity-logs']" routerLinkActive="active-link" *ngIf="display_permission.includes(2)">
+                    <mat-icon matListItemIcon>access_time</mat-icon>
+                    Activity Logs
+                </a>
+            </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="app-sidenav-content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

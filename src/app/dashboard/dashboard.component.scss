@@ -1,0 +1,35 @@
+.app-container {
+    /*height: 100%;*/
+    height: calc(100vh - 65px);
+    margin: 0;
+}
+
+.app-sidenav {
+    width: 270px;
+    border-radius: 0%;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #dbd9dd;
+}
+
+.app-sidenav-content {
+    /*display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;*/
+
+    height: calc(100vh - 130px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    padding: 16px;
+    overflow: auto;
+}
+
+.active-link {
+    background: #b2b2b2 !important;
+}
+
+.toolbar-bg {
+    background-color: #f6652e;
+}
