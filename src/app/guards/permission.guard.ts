@@ -33,6 +33,13 @@ export const permissionGuard: CanMatchFn = (route: Route, segments: UrlSegment[]
             router.navigate(['/login']);
           }
         break;
+        case "scoring":
+          if (account_permission.includes(4)) {
+            return true;
+          } else {
+            router.navigate(['/login']);
+          }
+        break;
       }
 
       return false;

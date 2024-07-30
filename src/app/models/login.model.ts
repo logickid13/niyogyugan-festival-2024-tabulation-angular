@@ -32,6 +32,9 @@ export interface UpdatePassword {
 	uid: string;
 	password: string;
 	confirm_password: string;
+	res: object;
+	[0]: any;
+	status: string;
 }
 
 export interface RefreshToken {

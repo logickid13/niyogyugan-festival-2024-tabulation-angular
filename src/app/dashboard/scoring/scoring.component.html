@@ -1,0 +1,31 @@
+<div class="max-w-full block mx-auto">
+    <div class="grid grid-cols-1 content-center md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+        <form [formGroup]="findScoreForm" novalidate>
+            <div class="text-center">
+                <mat-form-field appearance="fill" [style.width.%]="100">
+                    <mat-label>Municipality/City</mat-label>
+                    <input matInput type="text" placeholder="Municipality/City" aria-label="Municipality/City" formControlName="municipality_name" [matAutocomplete]="municipalities_auto">
+                      <mat-autocomplete #municipalities_auto="matAutocomplete">
+                        <mat-option *ngFor="let munic of (filteredMunicipalities | async)" [value]="munic.munic_name" (onSelectionChange)="onMunicipalitySelect($event,munic)">
+                          {{ munic.munic_name }}
+                        </mat-option>
+                      </mat-autocomplete>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill" [style.width.%]="100">
+                    <mat-label>Contest Name</mat-label>
+                    <input matInput type="text" placeholder="Contest Name" aria-label="Contest Name" formControlName="contest_name" [matAutocomplete]="contest_auto">
+                      <mat-autocomplete #contest_auto="matAutocomplete">
+                        <mat-option *ngFor="let c of (filteredContests | async)" [value]="c.c_name" (onSelectionChange)="onContestSelect($event,c)">
+                          {{ c.c_name }}
+                        </mat-option>
+                      </mat-autocomplete>
+                </mat-form-field>
+            </div>
+            <div>
+                {{ findScoreForm.value | json }}
+            </div>
+        </form>
+    </div>
+</div>

@@ -11,6 +11,11 @@ export const DASHBOARD_ROUTES: Routes = [
                 path: 'home',
                 loadComponent: () => import('../dashboard/home/home.component').then(m => m.HomeComponent),
                 canMatch: [permissionGuard]
+            },
+            {
+                path: 'scoring',
+                loadComponent: () => import('../dashboard/scoring/scoring.component').then(m => m.ScoringComponent),
+                canMatch: [permissionGuard]
             }
         ]
     }

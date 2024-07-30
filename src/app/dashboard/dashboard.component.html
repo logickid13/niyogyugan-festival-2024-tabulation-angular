@@ -15,7 +15,7 @@
     <span class="flex-auto"></span>
     <span class="flex justify-between items-center font-weight-semibold">
         <img class="w-12 h-12 relative flex justify-center items-center rounded-full mr-2" [src]="current_profile_pic" alt="Rounded avatar">
-        <span class="text-lg text-white">{{ display_fullname }}</span>
+        <span class="text-base text-white">{{ display_fullname }}</span>
     </span>
     <button mat-button [matMenuTriggerFor]="menu">
         <!-- <span class="text-blue-700 font-weight-semibold">
@@ -31,8 +31,8 @@
             Change Password
         </button>
         <button mat-menu-item (click)="profilePICDialog()" *ngIf="display_permission.includes(1.01)">
-        <mat-icon>portrait</mat-icon>
-        Update Profile Picture
+            <mat-icon>portrait</mat-icon>
+            Update Profile Picture
         </button>
         <button mat-menu-item (click)="logout()">
             <mat-icon>logout</mat-icon>
@@ -57,6 +57,10 @@
                 <a mat-list-item [routerLink]="['/dashboard/activity-logs']" routerLinkActive="active-link" *ngIf="display_permission.includes(2)">
                     <mat-icon matListItemIcon>access_time</mat-icon>
                     Activity Logs
+                </a>
+                <a mat-list-item [routerLink]="['/dashboard/scoring']" routerLinkActive="active-link" *ngIf="display_permission.includes(4)">
+                    <mat-icon matListItemIcon>score</mat-icon>
+                    Scoring
                 </a>
             </mat-nav-list>
     </mat-sidenav>

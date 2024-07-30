@@ -108,8 +108,8 @@ export class AuthenticateService {
       )
   }
 
-  updatePassword(changePasswordtoServer: UpdatePassword[]): Observable<UpdatePassword[]> {
-    return this.httpClient.post<UpdatePassword[]>(API_URL+'auth/updatePassword', changePasswordtoServer, httpOptions)
+  updatePassword(changePasswordtoServer: UpdatePassword): Observable<UpdatePassword> {
+    return this.httpClient.post<UpdatePassword>(API_URL+'auth/updatePassword', changePasswordtoServer, httpOptions)
     .pipe(
       catchError(this.handleError)
     )

@@ -486,6 +486,7 @@ var Breakpoints = {
 export {
   coerceBooleanProperty,
   coerceNumberProperty,
+  _isNumberValue,
   coerceArray,
   coerceCssPixelValue,
   coerceElement,
@@ -504,4 +505,4 @@ export {
   BreakpointObserver,
   Breakpoints
 };
-//# sourceMappingURL=chunk-HWU3YEJ6.js.map
+//# sourceMappingURL=chunk-YS62PEBH.js.map
