@@ -88,8 +88,8 @@ import {
   ɵɵtwoWayProperty,
   ɵɵviewQuery
 } from "./chunk-C6NVIEHR.js";
-import "./chunk-C5MXKN46.js";
 import "./chunk-P6V7QE56.js";
+import "./chunk-C5MXKN46.js";
 import "./chunk-RRDUBJAB.js";
 import {
   __async,
@@ -287,7 +287,6 @@ function PdfRotatePageCwComponent_pdf_shy_button_0_Template(rf, ctx) {
     ɵɵproperty("action", ctx_r0.rotateCW)("cssClass", ɵɵpipeBind2(1, 5, ctx_r0.showRotateCwButton, "hiddenXLView"))("disabled", ctx_r0.disableRotate)("order", 900)("closeOnClick", false);
   }
 }
-var _c5 = "[_nghost-%COMP%]:focus{outline:none}button[_ngcontent-%COMP%]:focus{outline:none}svg[_ngcontent-%COMP%]:focus{outline:none}button[_ngcontent-%COMP%]{padding:0;margin-top:0;margin-bottom:0}";
 function PdfRotatePageCcwComponent_pdf_shy_button_0_Template(rf, ctx) {
   if (rf & 1) {
     ɵɵelement(0, "pdf-shy-button", 1);
@@ -298,6 +297,7 @@ function PdfRotatePageCcwComponent_pdf_shy_button_0_Template(rf, ctx) {
     ɵɵproperty("action", ctx_r0.rotateCCW)("cssClass", ɵɵpipeBind2(1, 5, ctx_r0.showRotateCcwButton, "hiddenXLView"))("disabled", ctx_r0.disableRotate)("order", 1e3)("closeOnClick", false);
   }
 }
+var _c5 = "[_nghost-%COMP%]:focus{outline:none}button[_ngcontent-%COMP%]:focus{outline:none}svg[_ngcontent-%COMP%]:focus{outline:none}button[_ngcontent-%COMP%]{padding:0;margin-top:0;margin-bottom:0}.width-height-23px[_ngcontent-%COMP%]{width:23px;height:23px}";
 var _c6 = ["sizeSelector"];
 function PdfZoomDropdownComponent_option_3_Template(rf, ctx) {
   if (rf & 1) {
@@ -629,6 +629,7 @@ function PdfRotatePageComponent_pdf_shy_button_1_Template(rf, ctx) {
     ɵɵproperty("action", ctx_r0.rotateCCW)("cssClass", ɵɵpipeBind2(1, 5, ctx_r0.showRotateButton, "hiddenXLView"))("disabled", ctx_r0.disableRotate)("order", 1e3)("closeOnClick", false);
   }
 }
+var _c12 = "[_nghost-%COMP%]:focus{outline:none}button[_ngcontent-%COMP%]:focus{outline:none}svg[_ngcontent-%COMP%]:focus{outline:none}button[_ngcontent-%COMP%]{padding:0;margin-top:0;margin-bottom:0}";
 var FindState;
 (function(FindState2) {
   FindState2[FindState2["FOUND"] = 0] = "FOUND";
@@ -6643,7 +6644,7 @@ var PdfRotatePageCwComponent = class _PdfRotatePageCwComponent {
     },
     decls: 1,
     vars: 1,
-    consts: [["primaryToolbarId", "primaryPageRotateCw", "class", "rotateCw", "title", "Rotate Clockwise", "l10nId", "pdfjs-page-rotate-cw-button", "l10nLabel", "pdfjs-page-rotate-cw-button-label", "image", "<svg style='width: 23px; height: 23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12S7.03 21 12 21C14 21 15.92 20.34 17.5 19.14L16.06 17.7C14.87 18.54 13.45 19 12 19C8.13 19 5 15.87 5 12S8.13 5 12 5 19 8.13 19 12H16L20 16L24 12H21C21 7.03 16.97 3 12 3'/></svg>", 3, "action", "cssClass", "disabled", "order", "closeOnClick", 4, "ngIf"], ["primaryToolbarId", "primaryPageRotateCw", "title", "Rotate Clockwise", "l10nId", "pdfjs-page-rotate-cw-button", "l10nLabel", "pdfjs-page-rotate-cw-button-label", "image", "<svg style='width: 23px; height: 23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12S7.03 21 12 21C14 21 15.92 20.34 17.5 19.14L16.06 17.7C14.87 18.54 13.45 19 12 19C8.13 19 5 15.87 5 12S8.13 5 12 5 19 8.13 19 12H16L20 16L24 12H21C21 7.03 16.97 3 12 3'/></svg>", 1, "rotateCw", 3, "action", "cssClass", "disabled", "order", "closeOnClick"]],
+    consts: [["primaryToolbarId", "primaryPageRotateCw", "class", "rotateCw", "title", "Rotate Clockwise", "l10nId", "pdfjs-page-rotate-cw-button", "l10nLabel", "pdfjs-page-rotate-cw-button-label", "image", "<svg class='width-height-23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12S7.03 21 12 21C14 21 15.92 20.34 17.5 19.14L16.06 17.7C14.87 18.54 13.45 19 12 19C8.13 19 5 15.87 5 12S8.13 5 12 5 19 8.13 19 12H16L20 16L24 12H21C21 7.03 16.97 3 12 3'/></svg>", 3, "action", "cssClass", "disabled", "order", "closeOnClick", 4, "ngIf"], ["primaryToolbarId", "primaryPageRotateCw", "title", "Rotate Clockwise", "l10nId", "pdfjs-page-rotate-cw-button", "l10nLabel", "pdfjs-page-rotate-cw-button-label", "image", "<svg class='width-height-23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12S7.03 21 12 21C14 21 15.92 20.34 17.5 19.14L16.06 17.7C14.87 18.54 13.45 19 12 19C8.13 19 5 15.87 5 12S8.13 5 12 5 19 8.13 19 12H16L20 16L24 12H21C21 7.03 16.97 3 12 3'/></svg>", 1, "rotateCw", 3, "action", "cssClass", "disabled", "order", "closeOnClick"]],
     template: function PdfRotatePageCwComponent_Template(rf, ctx) {
       if (rf & 1) {
         ɵɵtemplate(0, PdfRotatePageCwComponent_pdf_shy_button_0_Template, 2, 8, "pdf-shy-button", 0);
@@ -6653,7 +6654,7 @@ var PdfRotatePageCwComponent = class _PdfRotatePageCwComponent {
       }
     },
     dependencies: [NgIf, PdfShyButtonComponent, ResponsiveCSSClassPipe],
-    styles: [_c5]
+    styles: ["[_nghost-%COMP%]:focus{outline:none}button[_ngcontent-%COMP%]:focus{outline:none}svg[_ngcontent-%COMP%]:focus{outline:none}button[_ngcontent-%COMP%]{padding:0;margin-top:0;margin-bottom:0}.width-height-23px[_ngcontent-%COMP%]{width:23px;height:23px}"]
   });
 };
 (() => {
@@ -6673,11 +6674,11 @@ var PdfRotatePageCwComponent = class _PdfRotatePageCwComponent {
   [disabled]="disableRotate"
   [order]="900"
   [closeOnClick]="false"
-  image="<svg style='width: 23px; height: 23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12S7.03 21 12 21C14 21 15.92 20.34 17.5 19.14L16.06 17.7C14.87 18.54 13.45 19 12 19C8.13 19 5 15.87 5 12S8.13 5 12 5 19 8.13 19 12H16L20 16L24 12H21C21 7.03 16.97 3 12 3'/></svg>"
+  image="<svg class='width-height-23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12S7.03 21 12 21C14 21 15.92 20.34 17.5 19.14L16.06 17.7C14.87 18.54 13.45 19 12 19C8.13 19 5 15.87 5 12S8.13 5 12 5 19 8.13 19 12H16L20 16L24 12H21C21 7.03 16.97 3 12 3'/></svg>"
 >
 </pdf-shy-button>
 `,
-      styles: [":host:focus{outline:none}button:focus{outline:none}svg:focus{outline:none}button{padding:0;margin-top:0;margin-bottom:0}\n"]
+      styles: [":host:focus{outline:none}button:focus{outline:none}svg:focus{outline:none}button{padding:0;margin-top:0;margin-bottom:0}.width-height-23px{width:23px;height:23px}\n"]
     }]
   }], () => [{
     type: PDFNotificationService
@@ -6734,7 +6735,7 @@ var PdfRotatePageCcwComponent = class _PdfRotatePageCcwComponent {
     },
     decls: 1,
     vars: 1,
-    consts: [["primaryToolbarId", "primaryPageRotateCcw", "class", "rotateCcw", "title", "Rotate Counterclockwise", "l10nId", "pdfjs-page-rotate-ccw-button", "l10nLabel", "pdfjs-page-rotate-ccw-button-label", "image", "<svg style='width: 23px; height: 23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12H0L4 16L8 12H5C5 8.13 8.13 5 12 5S19 8.13 19 12 15.87 19 12 19C10.55 19 9.13 18.54 7.94 17.7L6.5 19.14C8.08 20.34 10 21 12 21C16.97 21 21 16.97 21 12S16.97 3 12 3'/></svg>", 3, "action", "cssClass", "disabled", "order", "closeOnClick", 4, "ngIf"], ["primaryToolbarId", "primaryPageRotateCcw", "title", "Rotate Counterclockwise", "l10nId", "pdfjs-page-rotate-ccw-button", "l10nLabel", "pdfjs-page-rotate-ccw-button-label", "image", "<svg style='width: 23px; height: 23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12H0L4 16L8 12H5C5 8.13 8.13 5 12 5S19 8.13 19 12 15.87 19 12 19C10.55 19 9.13 18.54 7.94 17.7L6.5 19.14C8.08 20.34 10 21 12 21C16.97 21 21 16.97 21 12S16.97 3 12 3'/></svg>", 1, "rotateCcw", 3, "action", "cssClass", "disabled", "order", "closeOnClick"]],
+    consts: [["primaryToolbarId", "primaryPageRotateCcw", "class", "rotateCcw", "title", "Rotate Counterclockwise", "l10nId", "pdfjs-page-rotate-ccw-button", "l10nLabel", "pdfjs-page-rotate-ccw-button-label", "image", "<svg class='width-height-23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12H0L4 16L8 12H5C5 8.13 8.13 5 12 5S19 8.13 19 12 15.87 19 12 19C10.55 19 9.13 18.54 7.94 17.7L6.5 19.14C8.08 20.34 10 21 12 21C16.97 21 21 16.97 21 12S16.97 3 12 3'/></svg>", 3, "action", "cssClass", "disabled", "order", "closeOnClick", 4, "ngIf"], ["primaryToolbarId", "primaryPageRotateCcw", "title", "Rotate Counterclockwise", "l10nId", "pdfjs-page-rotate-ccw-button", "l10nLabel", "pdfjs-page-rotate-ccw-button-label", "image", "<svg class='width-height-23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12H0L4 16L8 12H5C5 8.13 8.13 5 12 5S19 8.13 19 12 15.87 19 12 19C10.55 19 9.13 18.54 7.94 17.7L6.5 19.14C8.08 20.34 10 21 12 21C16.97 21 21 16.97 21 12S16.97 3 12 3'/></svg>", 1, "rotateCcw", 3, "action", "cssClass", "disabled", "order", "closeOnClick"]],
     template: function PdfRotatePageCcwComponent_Template(rf, ctx) {
       if (rf & 1) {
         ɵɵtemplate(0, PdfRotatePageCcwComponent_pdf_shy_button_0_Template, 2, 8, "pdf-shy-button", 0);
@@ -6764,11 +6765,11 @@ var PdfRotatePageCcwComponent = class _PdfRotatePageCcwComponent {
   [disabled]="disableRotate"
   [order]="1000"
   [closeOnClick]="false"
-  image="<svg style='width: 23px; height: 23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12H0L4 16L8 12H5C5 8.13 8.13 5 12 5S19 8.13 19 12 15.87 19 12 19C10.55 19 9.13 18.54 7.94 17.7L6.5 19.14C8.08 20.34 10 21 12 21C16.97 21 21 16.97 21 12S16.97 3 12 3'/></svg>"
+  image="<svg class='width-height-23px' viewBox='0 0 24 24'><path fill='currentColor' d='M12 3C7.03 3 3 7.03 3 12H0L4 16L8 12H5C5 8.13 8.13 5 12 5S19 8.13 19 12 15.87 19 12 19C10.55 19 9.13 18.54 7.94 17.7L6.5 19.14C8.08 20.34 10 21 12 21C16.97 21 21 16.97 21 12S16.97 3 12 3'/></svg>"
 >
 </pdf-shy-button>
 `,
-      styles: [":host:focus{outline:none}button:focus{outline:none}svg:focus{outline:none}button{padding:0;margin-top:0;margin-bottom:0}\n"]
+      styles: [":host:focus{outline:none}button:focus{outline:none}svg:focus{outline:none}button{padding:0;margin-top:0;margin-bottom:0}.width-height-23px{width:23px;height:23px}\n"]
     }]
   }], () => [{
     type: PDFNotificationService
@@ -10829,7 +10830,7 @@ var PdfRotatePageComponent = class _PdfRotatePageComponent {
       }
     },
     dependencies: [NgIf, PdfShyButtonComponent, ResponsiveCSSClassPipe],
-    styles: [_c5]
+    styles: [_c12]
   });
 };
 (() => {

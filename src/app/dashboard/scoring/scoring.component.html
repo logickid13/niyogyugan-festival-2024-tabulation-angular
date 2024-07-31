@@ -1,31 +1,62 @@
 <div class="max-w-full block mx-auto">
-    <div class="grid grid-cols-1 content-center md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
-        <form [formGroup]="findScoreForm" novalidate>
-            <div class="text-center">
-                <mat-form-field appearance="fill" [style.width.%]="100">
-                    <mat-label>Municipality/City</mat-label>
-                    <input matInput type="text" placeholder="Municipality/City" aria-label="Municipality/City" formControlName="municipality_name" [matAutocomplete]="municipalities_auto">
-                      <mat-autocomplete #municipalities_auto="matAutocomplete">
-                        <mat-option *ngFor="let munic of (filteredMunicipalities | async)" [value]="munic.munic_name" (onSelectionChange)="onMunicipalitySelect($event,munic)">
-                          {{ munic.munic_name }}
-                        </mat-option>
-                      </mat-autocomplete>
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field appearance="fill" [style.width.%]="100">
-                    <mat-label>Contest Name</mat-label>
-                    <input matInput type="text" placeholder="Contest Name" aria-label="Contest Name" formControlName="contest_name" [matAutocomplete]="contest_auto">
-                      <mat-autocomplete #contest_auto="matAutocomplete">
-                        <mat-option *ngFor="let c of (filteredContests | async)" [value]="c.c_name" (onSelectionChange)="onContestSelect($event,c)">
-                          {{ c.c_name }}
-                        </mat-option>
-                      </mat-autocomplete>
-                </mat-form-field>
-            </div>
-            <div>
-                {{ findScoreForm.value | json }}
-            </div>
-        </form>
+  <form [formGroup]="findScoreForm" novalidate>
+    <div class="grid grid-cols-1 content-center md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2">
+      <div class="text-center">
+          <mat-form-field appearance="fill" [style.width.%]="100">
+              <mat-label>Municipality/City</mat-label>
+              <input matInput type="text" placeholder="Municipality/City" aria-label="Municipality/City" formControlName="municipality_name" [matAutocomplete]="municipalities_auto">
+                <mat-icon matSuffix>arrow_drop_down</mat-icon>
+                <mat-autocomplete #municipalities_auto="matAutocomplete">
+                  <mat-option *ngFor="let munic of (filteredMunicipalities | async)" [value]="munic.munic_name" (onSelectionChange)="onMunicipalitySelect($event,munic)">
+                    {{ munic.munic_name }}
+                  </mat-option>
+                </mat-autocomplete>
+          </mat-form-field>
+      </div>
+      <div>
+          <mat-form-field appearance="fill" [style.width.%]="100">
+              <mat-label>Contest Name</mat-label>
+              <input matInput type="text" placeholder="Contest Name" aria-label="Contest Name" formControlName="contest_name" [matAutocomplete]="contest_auto">
+              <mat-icon matSuffix>arrow_drop_down</mat-icon>  
+              <mat-autocomplete #contest_auto="matAutocomplete">
+                  <mat-option *ngFor="let c of (filteredContests | async)" [value]="c.c_name" (onSelectionChange)="onContestSelect($event,c)">
+                    {{ c.c_name }}
+                  </mat-option>
+                </mat-autocomplete>
+          </mat-form-field>
+      </div>
     </div>
+    <div class="text-center pt-2">
+      <button mat-raised-button aria-label="Example icon button with a delete icon" [disabled]="findScoreForm.invalid" (click)="getCurrentScore()">
+        <mat-icon>search</mat-icon> Search
+      </button>
+    </div>
+  </form>
+  <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 mx-auto mt-5">
+    <form [formGroup]="currentScoreForm" class="space-y-6" novalidate>
+        <div>
+          <mat-progress-bar [mode]="load_bar_mode" *ngIf="isLoading"></mat-progress-bar>
+          <mat-form-field appearance="fill" [style.width.%]="100">
+            <mat-label>Current Score</mat-label>
+            <input matInput type="text" placeholder="Current Score" aria-label="Current Score" formControlName="current_score" readonly>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill" [style.width.%]="100">
+            <mat-label>Score To be Added/Updated</mat-label>
+            <input matInput type="text" placeholder="Score To be Added/Updated" aria-label="Score To be Added/Updated" formControlName="score_to_be_added" required>
+            <mat-error *ngIf="getCurrentScoreFormControl.score_to_be_added.errors?.required">Field is Required</mat-error>
+            <mat-error *ngIf="getCurrentScoreFormControl.score_to_be_added.errors?.pattern">Only numerical values are allowed</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="text-center pt-2">
+          <button mat-raised-button class="m-2" aria-label="Add to Score" [disabled]="currentScoreForm.invalid" (click)="addToCurrentScore()">
+            <mat-icon>add</mat-icon> Add
+          </button>
+          <button mat-raised-button class="m-2" aria-label="Update The Current Score" [disabled]="currentScoreForm.invalid">
+            <mat-icon>edit</mat-icon> Update
+          </button>
+        </div>
+    </form>
+  </div>
 </div>

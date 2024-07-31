@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Municipalities, Contests } from '../models/scoring.model';
+import { Municipalities, Contests, GetCurrentScore, CurrentScoreToBeSent } from '../models/scoring.model';
 import { environment } from '../../environments/environment.development';
 import { forkJoin } from 'rxjs';
 
@@ -56,4 +56,19 @@ export class ScoringService {
       this.loadContests()
     ])
   }
+
+  getCurrentScore(param: GetCurrentScore): Observable<GetCurrentScore> {
+    return this.httpClient.post<GetCurrentScore>(API_URL+'scoring/getCurrentScore', param, httpOptions)
+   .pipe(
+     catchError(this.handleError)
+   )
+  }
+
+  addToCurrentScore(param: CurrentScoreToBeSent): Observable<CurrentScoreToBeSent> {
+    return this.httpClient.post<CurrentScoreToBeSent>(API_URL+'scoring/addToCurrentScore', param, httpOptions)
+   .pipe(
+     catchError(this.handleError)
+   )
+  }
+
 }

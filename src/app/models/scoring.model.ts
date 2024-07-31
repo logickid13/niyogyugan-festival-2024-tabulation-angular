@@ -23,3 +23,23 @@ export interface ContestsAutocomplete {
 	toLowerCase: any;
 	includes: any;
 }
+
+export interface GetCurrentScore {
+    municipality_id: string;
+    contest_id: string;
+    res: any;
+    [0]: any;
+    s_id: string;
+    s_score: string;
+}
+
+export interface CurrentScoreToBeSent {
+    rec_id: string;
+    current_score: string;
+    score_to_be_added: string;
+    municipality: string;
+    contest: string;
+    res: object;
+    [0]: any;
+    status: string;
+}
