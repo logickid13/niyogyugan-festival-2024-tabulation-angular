@@ -163,6 +163,13 @@ export class ConsolationComponent implements OnInit, OnDestroy {
           }));
     
           this.consolation_munic_table.renderRows();
+
+          // clear only municipality autocomplete
+          this.appendForm.patchValue({
+            municipality_name: null,
+            municipality_id: null
+          }, { emitEvent: false, onlySelf: true })
+
         }
       }
 

@@ -44,8 +44,8 @@ import {
   ɵɵtextInterpolate,
   ɵɵviewQuery
 } from "./chunk-C6NVIEHR.js";
-import "./chunk-P6V7QE56.js";
 import "./chunk-C5MXKN46.js";
+import "./chunk-P6V7QE56.js";
 import {
   timer
 } from "./chunk-RRDUBJAB.js";
