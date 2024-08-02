@@ -15,7 +15,6 @@ import {
   PortalModule,
   TemplatePortal
 } from "./chunk-5HIEVBRD.js";
-import "./chunk-XS7EH2RV.js";
 import {
   animate,
   animateChild,
@@ -26,6 +25,7 @@ import {
   transition,
   trigger
 } from "./chunk-HIPUNFJ6.js";
+import "./chunk-XS7EH2RV.js";
 import {
   A11yModule,
   Directionality,

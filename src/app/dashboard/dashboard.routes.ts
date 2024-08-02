@@ -16,6 +16,11 @@ export const DASHBOARD_ROUTES: Routes = [
                 path: 'scoring',
                 loadComponent: () => import('../dashboard/scoring/scoring.component').then(m => m.ScoringComponent),
                 canMatch: [permissionGuard]
+            },
+            {
+                path: 'consolation',
+                loadComponent: () => import('../dashboard/consolation/consolation.component').then(m => m.ConsolationComponent),
+                canMatch: [permissionGuard]
             }
         ]
     }

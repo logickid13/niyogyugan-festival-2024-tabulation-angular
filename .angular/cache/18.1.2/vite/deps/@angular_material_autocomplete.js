@@ -3,9 +3,6 @@ import {
   MatFormField
 } from "./chunk-FDP6DJGQ.js";
 import {
-  NG_VALUE_ACCESSOR
-} from "./chunk-PN6ZPFVM.js";
-import {
   Overlay,
   OverlayConfig,
   OverlayModule
@@ -17,7 +14,6 @@ import {
 import {
   TemplatePortal
 } from "./chunk-5HIEVBRD.js";
-import "./chunk-XS7EH2RV.js";
 import {
   animate,
   group,
@@ -26,6 +22,10 @@ import {
   transition,
   trigger
 } from "./chunk-HIPUNFJ6.js";
+import "./chunk-XS7EH2RV.js";
+import {
+  NG_VALUE_ACCESSOR
+} from "./chunk-PN6ZPFVM.js";
 import {
   ActiveDescendantKeyManager,
   DOWN_ARROW,

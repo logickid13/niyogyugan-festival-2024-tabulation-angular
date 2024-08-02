@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { Municipalities, Contests, GetCurrentScore, CurrentScoreToBeSent } from '../models/scoring.model';
+import { Municipalities, Contests, UpdateConsolationFinalScores } from '../models/consolation.model';
 import { environment } from '../../environments/environment.development';
 import { forkJoin } from 'rxjs';
 
@@ -16,7 +16,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class ScoringService {
+export class ConsolationService {
 
   constructor(private httpClient: HttpClient) {}
 
@@ -37,14 +37,14 @@ export class ScoringService {
   }
 
   loadMunicipalities(): Observable<Municipalities[]> {
-    return this.httpClient.get<Municipalities[]>(API_URL+'scoring/loadMunicipality', httpOptions)
+    return this.httpClient.get<Municipalities[]>(API_URL+'consolation/loadMunicipality', httpOptions)
    .pipe(
      catchError(this.handleError)
    )
   }
 
   loadContests(): Observable<Contests[]> {
-    return this.httpClient.get<Contests[]>(API_URL+'scoring/loadContest', httpOptions)
+    return this.httpClient.get<Contests[]>(API_URL+'consolation/loadContest', httpOptions)
    .pipe(
      catchError(this.handleError)
    )
@@ -57,25 +57,12 @@ export class ScoringService {
     ])
   }
 
-  getCurrentScore(param: GetCurrentScore): Observable<GetCurrentScore> {
-    return this.httpClient.post<GetCurrentScore>(API_URL+'scoring/getCurrentScore', param, httpOptions)
+  updateConsolationScores(param: UpdateConsolationFinalScores): Observable<UpdateConsolationFinalScores> {
+    return this.httpClient.post<UpdateConsolationFinalScores>(API_URL+'consolation/updateConsolationScore', param, httpOptions)
    .pipe(
      catchError(this.handleError)
    )
   }
 
-  addToCurrentScore(param: CurrentScoreToBeSent): Observable<CurrentScoreToBeSent> {
-    return this.httpClient.post<CurrentScoreToBeSent>(API_URL+'scoring/addToCurrentScore', param, httpOptions)
-   .pipe(
-     catchError(this.handleError)
-   )
-  }
-
-  updateCurrentScore(param: CurrentScoreToBeSent): Observable<CurrentScoreToBeSent> {
-    return this.httpClient.post<CurrentScoreToBeSent>(API_URL+'scoring/updateCurrentScore', param, httpOptions)
-   .pipe(
-     catchError(this.handleError)
-   )
-  }
 
 }

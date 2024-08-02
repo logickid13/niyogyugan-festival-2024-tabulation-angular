@@ -62,6 +62,10 @@
                     <mat-icon matListItemIcon>score</mat-icon>
                     Scoring
                 </a>
+                <a mat-list-item [routerLink]="['/dashboard/consolation']" routerLinkActive="active-link" *ngIf="display_permission.includes(5)">
+                    <mat-icon matListItemIcon>card_giftcard</mat-icon>
+                    Consolation
+                </a>
             </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

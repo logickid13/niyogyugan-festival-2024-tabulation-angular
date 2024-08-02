@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -9,8 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule, ProgressBarMode } from '@angular/material/progress-bar';
 import { ScoringService } from '../../services/scoring.service';
 import { MunicipalitiesAutocomplete, ContestsAutocomplete, GetCurrentScore } from '../../models/scoring.model';
-import { Observable, throwError, startWith, map } from 'rxjs';
+import { Observable, throwError, startWith, map, Subscription } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
+import { AuthenticateService } from '../../services/authenticate.service';
 
 @Component({
   selector: 'app-scoring',
@@ -29,7 +30,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './scoring.component.html',
   styleUrl: './scoring.component.scss'
 })
-export class ScoringComponent implements OnInit {
+export class ScoringComponent implements OnInit, OnDestroy {
 
     public findScoreForm!: FormGroup;
     public findScoreFormData!: GetCurrentScore;
@@ -40,15 +41,23 @@ export class ScoringComponent implements OnInit {
     public filteredContests!: Observable<ContestsAutocomplete[]>;
     public load_bar_mode:ProgressBarMode = 'indeterminate';
     public isLoading = false;
+    main_permission: number[] = [];
+    current_permission_observable!: Subscription;
 
     constructor(
       public formBuilder: FormBuilder,
       private scoringService: ScoringService,
-      private toastrService: ToastrService
+      private toastrService: ToastrService,
+      private authService: AuthenticateService
     ) {}
 
 
     ngOnInit(): void {
+
+      this.current_permission_observable = this.authService.accountPermissionOb().subscribe(val => {
+        this.main_permission = val;
+      });
+
       this.findScoreForm = this.formBuilder.group({
         municipality_name: [null, [Validators.required]],
         contest_name: [null, Validators.required],
@@ -211,5 +220,57 @@ export class ScoringComponent implements OnInit {
 
     }
 
+    updateCurrentScore(): void {
+      let data = this.currentScoreForm.value;
+      this.scoringService.updateCurrentScore(data).subscribe({
+        next: (res) => {
+          if (res[0].status == 'fail') {
+            this.toastrService.warning('Score Not Updated', '', {
+              progressBar: true,
+              timeOut: 2000
+            });
+          } else if (res[0].status == 'success') {
+            this.toastrService.success('Score Updated', '', {
+              progressBar: true,
+              timeOut: 2000
+            });
+
+            // clear current score form
+            this.currentScoreForm.patchValue({
+              rec_id: null,
+              current_score: null,
+              score_to_be_added: null,
+              municipality: null,
+              contest: null
+            }, {
+              emitEvent: false, 
+              onlySelf: true
+            })
+
+            // clear search form
+            this.findScoreForm.patchValue({
+              municipality_name: null,
+              contest_name: null,
+              municipality_id: null,
+              contest_id: null
+            }, {
+              emitEvent: false, 
+              onlySelf: true
+            })
+
+
+          }
+        },
+        error: (err) => {
+          return throwError(() => err);
+        }
+      });
+    }
+
+    ngOnDestroy(): void {
+      if (this.current_permission_observable) {
+        this.current_permission_observable.unsubscribe();
+      }
+    }
 
 }

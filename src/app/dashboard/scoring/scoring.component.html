@@ -50,10 +50,10 @@
           </mat-form-field>
         </div>
         <div class="text-center pt-2">
-          <button mat-raised-button class="m-2" aria-label="Add to Score" [disabled]="currentScoreForm.invalid" (click)="addToCurrentScore()">
+          <button mat-raised-button class="m-2" aria-label="Add to Score" [disabled]="currentScoreForm.invalid" (click)="addToCurrentScore()" *ngIf="main_permission.includes(4.01)">
             <mat-icon>add</mat-icon> Add
           </button>
-          <button mat-raised-button class="m-2" aria-label="Update The Current Score" [disabled]="currentScoreForm.invalid">
+          <button mat-raised-button class="m-2" aria-label="Update The Current Score" [disabled]="currentScoreForm.invalid" (click)="updateCurrentScore()" *ngIf="main_permission.includes(4.02)">
             <mat-icon>edit</mat-icon> Update
           </button>
         </div>

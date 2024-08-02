@@ -1,8 +1,4 @@
 import {
-  MatButton,
-  MatButtonModule
-} from "./chunk-OGHQPROI.js";
-import {
   Overlay,
   OverlayConfig,
   OverlayModule
@@ -15,7 +11,6 @@ import {
   PortalModule,
   TemplatePortal
 } from "./chunk-5HIEVBRD.js";
-import "./chunk-XS7EH2RV.js";
 import {
   animate,
   state,
@@ -23,6 +18,11 @@ import {
   transition,
   trigger
 } from "./chunk-HIPUNFJ6.js";
+import "./chunk-XS7EH2RV.js";
+import {
+  MatButton,
+  MatButtonModule
+} from "./chunk-OGHQPROI.js";
 import {
   LiveAnnouncer,
   MatCommonModule
