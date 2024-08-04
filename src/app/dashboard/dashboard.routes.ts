@@ -21,6 +21,11 @@ export const DASHBOARD_ROUTES: Routes = [
                 path: 'consolation',
                 loadComponent: () => import('../dashboard/consolation/consolation.component').then(m => m.ConsolationComponent),
                 canMatch: [permissionGuard]
+            },
+            {
+                path: 'activity-logs',
+                loadComponent: () => import('../dashboard/activity-logs/activity-logs.component').then(m => m.ActivityLogsComponent),
+                canMatch: [permissionGuard]
             }
         ]
     }
