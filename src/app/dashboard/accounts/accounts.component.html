@@ -1,1 +1,99 @@
-<p>accounts works!</p>
+<div class="container mb-5">
+    <button mat-raised-button class="mx-2" (click)="newAccount()" *ngIf="current_permission.includes(3.01)">
+      <mat-icon>person_add</mat-icon> New Account
+    </button>
+    <button mat-raised-button class="mx-2" (click)="resetFilterTable()">
+        <mat-icon>search_off</mat-icon> Clear Search
+    </button>
+    <button mat-raised-button class="mx-2" (click)="filterToggle = !filterToggle">
+      <mat-icon>filter_list</mat-icon> Filter Data
+    </button>
+</div>
+
+<div class="mb-5 py-2 block justify-center" *ngIf="filterToggle">
+  <form [formGroup]="filterForm" novalidate>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
+      <div>
+        <mat-form-field appearance="fill" class="mx-2" [style.width.%]="100">
+        <mat-label>Username</mat-label>
+          <input matInput type="text" placeholder="Search Username" id="username" name="username" formControlName="username" autocomplete="on">
+          <mat-icon matPrefix>search</mat-icon>
+        </mat-form-field>
+      </div>
+      <div> 
+        <mat-form-field appearance="fill" class="mx-2" [style.width.%]="100">
+        <mat-label>Full Name</mat-label>
+          <input matInput type="text" placeholder="Search Full Name" id="fullname" name="fullname" formControlName="fullname" autocomplete="on">
+          <mat-icon matPrefix>search</mat-icon>
+        </mat-form-field> 
+      </div>
+    </div>
+  </form>
+  <div class="mb-3 grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
+    <div class="mx-auto">
+      <button mat-raised-button color="primary" (click)="filter()">
+        <mat-icon>search</mat-icon> Search
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div class="mat-elevation-z8">
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+  <table mat-table #accounts_tbl [dataSource]="dataSource" matSort matSortActive="id_no" matSortDisableClear matSortDirection="desc">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id_no">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id_no}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef> Username </th>
+      <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fullname">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.fullname}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="profile_pic">
+      <th mat-header-cell *matHeaderCellDef> Profile Picture </th>
+      <td mat-cell *matCellDef="let element"> {{element.profile_pic}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="active">
+      <th mat-header-cell *matHeaderCellDef> Active </th>
+      <td mat-cell *matCellDef="let element"> {{element.active}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element; let row;"> 
+          <!-- <button mat-mini-fab color="accent" class="mr-2" (click)="updateAccount(row)">
+            <mat-icon>edit</mat-icon> 
+          </button>
+          <button mat-mini-fab color="accent" (click)="unlockAccount(row)">
+            <mat-icon>lock_open</mat-icon> 
+          </button> -->
+          <button mat-mini-fab color="accent" class="mr-2">
+            <mat-icon>edit</mat-icon> 
+          </button>
+          <button mat-mini-fab color="accent">
+            <mat-icon>lock_open</mat-icon> 
+          </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator [length]="totalRows" [pageIndex]="currentPage" [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions" showFirstLastButtons aria-label="Select page">
+  </mat-paginator>
+
+</div>
+

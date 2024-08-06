@@ -1,0 +1,131 @@
+<div class="grid grid-rows-1 grid-cols-3 mt-5 mb-3">
+	<div></div>
+	<div>
+		<div class="flex justify-center text-center text-xl font-weight-bold">
+			<mat-icon>perm_identity</mat-icon> Account Information
+		</div>
+	</div>
+	<div class="px-3">
+		<div class="flex justify-end">
+			<button mat-mini-fab color="accent" (click)="closeDialog()"><mat-icon>close</mat-icon></button>
+		</div>
+	</div>
+</div>
+<mat-dialog-content>
+	<form [formGroup]="newAccountForm" novalidate>
+		<mat-form-field appearance="fill" [style.width.%]="100">
+			<mat-label>Username</mat-label>
+			<input matInput type="text" placeholder="Username" id="new_username" name="new_username" formControlName="username" autocomplete="on" required>
+			<mat-error *ngIf="getControl.username.errors?.required">Field is Required</mat-error>
+			<mat-error *ngIf="getControl.username.errors?.pattern">Only numerical values are allowed</mat-error>
+		</mat-form-field>
+		<br><br>
+		<mat-form-field appearance="fill" [style.width.%]="100">
+			<mat-label>Full Name</mat-label>
+			<input matInput type="text" placeholder="Full Name" id="new_fullname" name="new_fullname" formControlName="fullname" autocomplete="on" required>
+			<mat-error *ngIf="getControl.username.errors?.required">Field is Required</mat-error>
+		</mat-form-field>
+		<div class="my-2">
+			<div class="grid grid-cols-2 gap-4">
+				<div>
+					<mat-form-field appearance="fill" [style.width.%]="100">
+						<mat-label>Password</mat-label>
+						<input matInput type="password" placeholder="Password" id="new_password" name="new_password" formControlName="password" autocomplete="on" required>
+						<mat-error *ngIf="getControl.password.errors?.required">Field is Required</mat-error>
+					</mat-form-field>
+				</div>
+				<div>
+					<mat-form-field appearance="fill" [style.width.%]="100">
+						<mat-label>Confirm Password</mat-label>
+						<input matInput type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password" formControlName="confirm_password" autocomplete="on" required>
+						<mat-error *ngIf="getControl.confirm_password.errors?.required">Field is Required</mat-error>
+					</mat-form-field>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<h2 class="font-semibold">Account Permissions</h2>
+		<mat-error *ngIf="getControl.permission_arr.errors?.required">Select at least one!</mat-error>
+		<br><br>
+		<div class="grid grid-rows-1 grid-cols-2 grid-items-stretch gap-4">
+			<div *ngFor="let item of permission_arr">
+				<div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+					<div class="flex items-center justify-between mb-4">
+						<mat-checkbox [value]="item.id" [checked]="item.isSelected" color="primary" (change)="onCheckboxChangePermissionArr($event,item)">
+							<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">{{ item.permission }}</h5>
+					  	</mat-checkbox>
+					</div>
+				   <div class="flow-root">
+						<ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+							<li class="py-3 sm:py-4" *ngFor="let sub_item of item.sub_permission">
+								<div class="flex items-center">
+									<mat-checkbox [value]="sub_item.id" [checked]="sub_item.isSelected" color="primary" (change)="onCheckboxChangeSubPermissionArr($event)">
+										{{ sub_item.permission }}
+									</mat-checkbox>
+								</div>
+							</li>
+						</ul>
+				   </div>
+				</div>
+			</div>
+			
+			<!-- <div *ngFor="let item of permission_arr">
+				<mat-checkbox [value]="item.id" [checked]="item.isSelected" (change)="onCheckboxChangePermissionArr($event)" color="primary">
+      				{{ item.permission }}
+    			</mat-checkbox>
+			</div> -->
+		</div>
+		<!-- <ul>
+  			<li *ngFor="let item of permission_arr">
+  				<mat-checkbox [value]="item.id" [checked]="item.isSelected" (change)="onCheckboxChangePermissionArr($event)" color="primary">
+      				{{ item.permission }}
+    			</mat-checkbox>
+  			</li>
+  		</ul> -->
+      	<br><br>
+      	<mat-form-field appearance="fill" [style.width.%]="100">
+			<mat-label>With Profile Picture?</mat-label>
+			<mat-select id="profile_pic" name="profile_pic" formControlName="profile_pic" (selectionChange)="onProfilePicDropdownChange($event)" required>
+				<mat-option value="y">Yes</mat-option>
+				<mat-option value="n">No</mat-option>
+			</mat-select>
+			<mat-error *ngIf="getControl.profile_pic.errors?.required">Field is Required</mat-error>
+		</mat-form-field>
+		<br><br>
+		<ngx-file-drop dropZoneLabel="Drop single file or multiple files here..." (onFileDrop)="dropped($event)" 
+	    [multiple]="false" [disabled]="!profile_pic_toggle">
+	        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+	          Drop Files here Or... 
+	          <button mat-raised-button (click)="openFileSelector()" [disabled]="!profile_pic_toggle">Browse Files</button>
+	        </ng-template>
+	    </ngx-file-drop>
+	    <br><br>
+	    <table mat-table [dataSource]="files_arr" class="mat-elevation-z8 w-full">
+	  		<!--- Note that these columns can be defined in any order.
+	        		The actual rendered columns are set as a property on the row definition" -->
+	  		<!-- Name Column -->
+	  		<ng-container matColumnDef="name">
+	    		<th mat-header-cell *matHeaderCellDef>File Name</th>
+	    		<td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+	  		</ng-container>
+
+	  		<!-- Action Column -->
+	  		<ng-container matColumnDef="action">
+	    		<th mat-header-cell *matHeaderCellDef>Action</th>
+	    		<td mat-cell *matCellDef="let element; let i = index"> 
+	    			<button mat-raised-button color="warn" (click)="removeFile(i)">
+	    				<mat-icon>delete</mat-icon> Delete 
+	    			</button>
+	    		</td>
+	  		</ng-container>
+
+	  		<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	  		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+		</table>
+		<br><br>
+		<div class="flex justify-center">
+			<button mat-raised-button class="mat-primary" (click)="onSubmit()" [disabled]="newAccountForm.invalid">Submit</button>
+		</div>
+	</form>
+</mat-dialog-content>
+

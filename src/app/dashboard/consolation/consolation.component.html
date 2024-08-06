@@ -80,7 +80,7 @@
       </div>
       <br>
       <div class="text-center pt-2">
-        <button mat-raised-button aria-label="Example icon button with a delete icon" [disabled]="appendForm.invalid" (click)="updateConsolationScores()">
+        <button mat-raised-button aria-label="Example icon button with a delete icon" [disabled]="appendForm.invalid" (click)="updateConsolationScores()" *ngIf="main_permission.includes(5.01)">
           <mat-icon>edit</mat-icon> Update Scores
         </button>
       </div>

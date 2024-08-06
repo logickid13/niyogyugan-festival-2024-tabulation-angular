@@ -26,6 +26,11 @@ export const DASHBOARD_ROUTES: Routes = [
                 path: 'activity-logs',
                 loadComponent: () => import('../dashboard/activity-logs/activity-logs.component').then(m => m.ActivityLogsComponent),
                 canMatch: [permissionGuard]
+            },
+            {
+                path: 'accounts',
+                loadComponent: () => import('../dashboard/accounts/accounts.component').then(m => m.AccountsComponent),
+                canMatch: [permissionGuard]
             }
         ]
     }
