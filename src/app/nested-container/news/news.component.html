@@ -1,0 +1,9 @@
+<ngx-loading-bar color="#f86a34" height="5px" ref="http" ref="http"></ngx-loading-bar>
+<div class="max-w-full h-auto bg-white rounded-md">
+    <div class="block mx-auto text-center py-8">
+        <span class="page-title">NEWS &#38; UPDATES</span>
+    </div>
+    <div class="block mx-auto text-center">
+        <mat-progress-bar [mode]="load_bar_mode" *ngIf="isLoading"></mat-progress-bar>
+    </div>
+</div>
