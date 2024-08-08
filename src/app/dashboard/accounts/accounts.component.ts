@@ -14,9 +14,10 @@ import { Subscription, merge, throwError } from 'rxjs';
 import { map, startWith, switchMap } from 'rxjs/operators';
 import { AccountService } from '../../services/account.service';
 import { ToastrService } from 'ngx-toastr';
-import { Account, TableParameters, QueryParameters, NewAccount } from '../../models/account.model';
+import { Account, TableParameters, QueryParameters, NewAccount, UpdateBasicInfo } from '../../models/account.model';
 import { AuthenticateService } from '../../services/authenticate.service';
 import { NewAccountComponent } from '../../dialog/new-account/new-account.component';
+import { UpdateAccountComponent } from '../../dialog/update-account/update-account.component';
 
 @Component({
   selector: 'app-accounts',
@@ -117,6 +118,43 @@ export class AccountsComponent implements OnInit, AfterViewInit, OnDestroy {
           }
       });
       
+    }
+
+    updateAccount(row: any): void {
+      // console.log(row);
+      let update_account_dialog = this.dialog.open(UpdateAccountComponent, {
+          data: {
+            id_no: row.id_no,
+            username: row.username,
+            fullname: row.fullname,
+            profile_pic: row.profile_pic,
+            permission: JSON.parse(row.permission),
+            active: row.active
+          },
+          height: '600px',
+          width: '800px',
+          disableClose: true
+      });
+  
+      update_account_dialog.backdropClick().subscribe(result => {
+          // Close the dialog
+          // dialogRef.close();
+          this.toastrService.warning('Clicking Outside is Disabled', '', {
+            progressBar: true,
+            timeOut: 2000
+          });
+      });
+  
+      update_account_dialog.afterClosed().subscribe((result: UpdateBasicInfo) => {
+          // console.log(result.response); // result from dialog component
+          if (result.response == 'success') {
+            this.reloadTable();
+          } else {
+            console.log(result);
+          }
+      });
+  
+  
     }
 
     ngAfterViewInit(): void {
