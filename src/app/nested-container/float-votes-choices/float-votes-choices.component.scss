@@ -125,4 +125,13 @@
   opacity: 0.3; /* Slightly dim the image on checkbox checked */
 }
 
+/* float-confirmation-dialog.component.scss */
+.scrollable-dialog {
+  .mat-dialog-content {
+    max-height: 800px; // Adjust this value as needed
+    overflow-y: auto;  // Enable vertical scrolling
+  }
+}
+
+
   

@@ -51,11 +51,10 @@ export class FloatConfirmationDialogComponent {
 
   ngOnInit(): void {
     this.voterForm = this.formBuilder.group({
-      fullname: this.formBuilder.group({
-        firstname: ["", Validators.required],
-        middlename: [""],
-        surname: ["", Validators.required]
-      }),
+      fullname: ["", Validators.required],
+      email: ["", Validators.required],
+      mobileno: ["", Validators.required],
+      address: ["", Validators.required],
       facebook: ["", Validators.required],
       municipalitySelections: this.formBuilder.array(this.paramData.votes),
       agree_to_terms_and_conditions: [false, checkboxRequiredValidator()]

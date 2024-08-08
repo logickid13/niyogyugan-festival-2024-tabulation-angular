@@ -29,51 +29,74 @@
     
     <!-- Full Name Group -->
     <fieldset class="border border-gray-300 p-4 rounded-md">
-      <legend class="text-lg font-medium mb-2">Full Name</legend>
-      <div formGroupName="fullname" class="space-y-4">
+      <legend class="text-lg font-medium mb-2">Personal Details</legend>
         
-        <!-- First Name -->
+        <!-- Fullname -->
         <div class="mb-5">
-          <label for="firstname" class="block mb-2 text-sm font-medium text-gray-900">First Name:</label>
-          <input id="firstname" formControlName="firstname" type="text"
+          <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900">Fullname:</label>
+          <input id="fullname" formControlName="fullname" type="text"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="John"
-            [ngClass]="{'border-green-500': getControl.fullname.get('firstname').valid && getControl.fullname.get('firstname').touched, 
-                        'border-red-500': getControl.fullname.get('firstname').invalid && (getControl.fullname.get('firstname').dirty || getControl.fullname.get('firstname').touched)}"
+            placeholder="John Doe"
+            [ngClass]="{'border-green-500': getControl.fullname.valid && getControl.fullname.touched, 
+                        'border-red-500': getControl.fullname.invalid && (getControl.fullname.dirty || getControl.fullname.touched)}"
             required>
-          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.fullname.get('firstname').invalid && (getControl.fullname.get('firstname').dirty || getControl.fullname.get('firstname').touched)">
-            <div *ngIf="getControl.fullname.get('firstname').errors?.['required']">
+          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.fullname.invalid && (getControl.fullname.dirty || getControl.fullname.touched)">
+            <div *ngIf="getControl.fullname.errors?.['required']">
               This field is required.
             </div>
           </div>
         </div>
 
-        <!-- Middle Name -->
+        <!-- Email -->
         <div class="mb-5">
-          <label for="middlename" class="block mb-2 text-sm font-medium text-gray-900">Middle Name:</label>
-          <input id="middlename" formControlName="middlename" type="text"
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email:</label>
+          <input id="email" formControlName="email" type="email"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="Doe"
-            [ngClass]="{'border-green-500': getControl.fullname.get('middlename').valid && getControl.fullname.get('middlename').touched, 
-                        'border-red-500': getControl.fullname.get('middlename').invalid && (getControl.fullname.get('middlename').dirty || getControl.fullname.get('middlename').touched)}">
-        </div>
-
-        <!-- Surname -->
-        <div class="mb-5">
-          <label for="surname" class="block mb-2 text-sm font-medium text-gray-900">Surname:</label>
-          <input id="surname" formControlName="surname" type="text"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="Smith"
-            [ngClass]="{'border-green-500': getControl.fullname.get('surname').valid && getControl.fullname.get('surname').touched, 
-                        'border-red-500': getControl.fullname.get('surname').invalid && (getControl.fullname.get('surname').dirty || getControl.fullname.get('surname').touched)}"
+            placeholder="example@example.com"
+            [ngClass]="{'border-green-500': getControl.email.valid && getControl.email.touched, 
+                        'border-red-500': getControl.email.invalid && (getControl.email.dirty || getControl.email.touched)}"
             required>
-          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.fullname.get('surname').invalid && (getControl.fullname.get('surname').dirty || getControl.fullname.get('surname').touched)">
-            <div *ngIf="getControl.fullname.get('surname').errors?.['required']">
+          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.email.invalid && (getControl.email.dirty || getControl.email.touched)">
+            <div *ngIf="getControl.email.errors?.['required']">
+              This field is required.
+            </div>
+            <div *ngIf="getControl.email.errors?.['email']">
+              Please enter a valid email address.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Mobile Number -->
+        <div class="mb-5">
+          <label for="mobileno" class="block mb-2 text-sm font-medium text-gray-900">Mobile Number:</label>
+          <input id="mobileno" formControlName="mobileno" type="tel"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="09123456789"
+            [ngClass]="{'border-green-500': getControl.mobileno.valid && getControl.mobileno.touched, 
+                        'border-red-500': getControl.mobileno.invalid && (getControl.mobileno.dirty || getControl.mobileno.touched)}"
+            required>
+          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.mobileno.invalid && (getControl.mobileno.dirty || getControl.mobileno.touched)">
+            <div *ngIf="getControl.mobileno.errors?.['required']">
               This field is required.
             </div>
           </div>
         </div>
-      </div>
+    
+        <!-- Address -->
+        <div class="mb-5">
+          <label for="address" class="block mb-2 text-sm font-medium text-gray-900">Address:</label>
+          <input id="address" formControlName="address" type="text"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="123 Main St"
+            [ngClass]="{'border-green-500': getControl.address.valid && getControl.address.touched, 
+                        'border-red-500': getControl.address.invalid && (getControl.address.dirty || getControl.address.touched)}"
+            required>
+          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.address.invalid && (getControl.address.dirty || getControl.address.touched)">
+            <div *ngIf="getControl.address.errors?.['required']">
+              This field is required.
+            </div>
+          </div>
+        </div>
     </fieldset>
 
     <!-- Facebook Field -->

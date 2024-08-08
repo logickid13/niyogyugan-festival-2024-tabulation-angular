@@ -121,7 +121,8 @@ export class FloatVotesChoicesComponent implements OnInit {
         votes: selectionArray
       },
       width: '500px',  // Set the width of the dialog
-      // height: '300px'  // Set the height of the dialog
+      height: '800px', // Set the height of the dialog
+      panelClass: 'scrollable-dialog' // Add a custom CSS class
     });
 
     dialogRef.afterClosed().subscribe(result => {
