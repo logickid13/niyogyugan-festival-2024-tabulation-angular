@@ -1,12 +1,12 @@
 import {
   DomSanitizer
-} from "./chunk-WTVZWMCP.js";
-import "./chunk-GC2WZBFU.js";
+} from "./chunk-IYUTGFDY.js";
+import "./chunk-A7N6XT46.js";
 import {
   FormsModule,
   NgSelectOption,
   ɵNgSelectMultipleOption
-} from "./chunk-OF5S2JHE.js";
+} from "./chunk-3RYLAIXW.js";
 import {
   AsyncPipe,
   CommonModule,
@@ -17,7 +17,7 @@ import {
   NgTemplateOutlet,
   PlatformLocation,
   isPlatformBrowser
-} from "./chunk-SA743QD5.js";
+} from "./chunk-M3J7RHIA.js";
 import {
   CSP_NONCE,
   ChangeDetectionStrategy,
@@ -88,9 +88,9 @@ import {
   ɵɵtwoWayListener,
   ɵɵtwoWayProperty,
   ɵɵviewQuery
-} from "./chunk-DTF4Q2T2.js";
-import "./chunk-C5MXKN46.js";
+} from "./chunk-CVPNMULL.js";
 import "./chunk-P6V7QE56.js";
+import "./chunk-C5MXKN46.js";
 import "./chunk-RRDUBJAB.js";
 import {
   __async,
@@ -813,8 +813,8 @@ var PdfDummyComponentsComponent = class _PdfDummyComponentsComponent {
     }
     return false;
   }
-  static ɵfac = function PdfDummyComponentsComponent_Factory(ɵt) {
-    return new (ɵt || _PdfDummyComponentsComponent)();
+  static ɵfac = function PdfDummyComponentsComponent_Factory(t) {
+    return new (t || _PdfDummyComponentsComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfDummyComponentsComponent,
@@ -1237,8 +1237,8 @@ var PDFNotificationService = class _PDFNotificationService {
       }
     });
   }
-  static ɵfac = function PDFNotificationService_Factory(ɵt) {
-    return new (ɵt || _PDFNotificationService)();
+  static ɵfac = function PDFNotificationService_Factory(t) {
+    return new (t || _PDFNotificationService)();
   };
   static ɵprov = ɵɵdefineInjectable({
     token: _PDFNotificationService,
@@ -1832,8 +1832,8 @@ var NgxExtendedPdfViewerService = class _NgxExtendedPdfViewerService {
       details: [[editorPropertyType, value]]
     });
   }
-  static ɵfac = function NgxExtendedPdfViewerService_Factory(ɵt) {
-    return new (ɵt || _NgxExtendedPdfViewerService)(ɵɵinject(RendererFactory2), ɵɵinject(PDFNotificationService));
+  static ɵfac = function NgxExtendedPdfViewerService_Factory(t) {
+    return new (t || _NgxExtendedPdfViewerService)(ɵɵinject(RendererFactory2), ɵɵinject(PDFNotificationService));
   };
   static ɵprov = ɵɵdefineInjectable({
     token: _NgxExtendedPdfViewerService,
@@ -1895,8 +1895,8 @@ var PdfCspPolicyService = class _PdfCspPolicyService {
       scripts.src = css;
     }
   }
-  static ɵfac = function PdfCspPolicyService_Factory(ɵt) {
-    return new (ɵt || _PdfCspPolicyService)();
+  static ɵfac = function PdfCspPolicyService_Factory(t) {
+    return new (t || _PdfCspPolicyService)();
   };
   static ɵprov = ɵɵdefineInjectable({
     token: _PdfCspPolicyService,
@@ -2173,8 +2173,8 @@ new (function () {
       support !== void 0 ? resolve(support) : resolve(this.addScriptOpChainingSupport(useInlineScripts));
     });
   }
-  static ɵfac = function PDFScriptLoaderService_Factory(ɵt) {
-    return new (ɵt || _PDFScriptLoaderService)(ɵɵinject(PdfCspPolicyService));
+  static ɵfac = function PDFScriptLoaderService_Factory(t) {
+    return new (t || _PDFScriptLoaderService)(ɵɵinject(PdfCspPolicyService));
   };
   static ɵprov = ɵɵdefineInjectable({
     token: _PDFScriptLoaderService,
@@ -2298,8 +2298,8 @@ var NgxKeyboardManagerService = class _NgxKeyboardManagerService {
   registerKeyboardListener(PDFViewerApplication) {
     PDFViewerApplication.ngxKeyboardManager = this;
   }
-  static ɵfac = function NgxKeyboardManagerService_Factory(ɵt) {
-    return new (ɵt || _NgxKeyboardManagerService)();
+  static ɵfac = function NgxKeyboardManagerService_Factory(t) {
+    return new (t || _NgxKeyboardManagerService)();
   };
   static ɵprov = ɵɵdefineInjectable({
     token: _NgxKeyboardManagerService,
@@ -2352,8 +2352,8 @@ var ResponsiveCSSClassPipe = class _ResponsiveCSSClassPipe {
         return "hiddenXXLView";
     }
   }
-  static ɵfac = function ResponsiveCSSClassPipe_Factory(ɵt) {
-    return new (ɵt || _ResponsiveCSSClassPipe)();
+  static ɵfac = function ResponsiveCSSClassPipe_Factory(t) {
+    return new (t || _ResponsiveCSSClassPipe)();
   };
   static ɵpipe = ɵɵdefinePipe({
     name: "responsiveCSSClass",
@@ -2405,8 +2405,8 @@ var NegativeResponsiveCSSClassPipe = class _NegativeResponsiveCSSClassPipe {
         return "visibleXXLView";
     }
   }
-  static ɵfac = function NegativeResponsiveCSSClassPipe_Factory(ɵt) {
-    return new (ɵt || _NegativeResponsiveCSSClassPipe)();
+  static ɵfac = function NegativeResponsiveCSSClassPipe_Factory(t) {
+    return new (t || _NegativeResponsiveCSSClassPipe)();
   };
   static ɵpipe = ɵɵdefinePipe({
     name: "invertForSecondaryToolbar",
@@ -2621,8 +2621,8 @@ var DynamicCssComponent = class _DynamicCssComponent {
       styles.parentElement.removeChild(styles);
     }
   }
-  static ɵfac = function DynamicCssComponent_Factory(ɵt) {
-    return new (ɵt || _DynamicCssComponent)(ɵɵdirectiveInject(Renderer2), ɵɵdirectiveInject(DOCUMENT), ɵɵdirectiveInject(PLATFORM_ID), ɵɵdirectiveInject(PdfCspPolicyService), ɵɵdirectiveInject(CSP_NONCE, 8));
+  static ɵfac = function DynamicCssComponent_Factory(t) {
+    return new (t || _DynamicCssComponent)(ɵɵdirectiveInject(Renderer2), ɵɵdirectiveInject(DOCUMENT), ɵɵdirectiveInject(PLATFORM_ID), ɵɵdirectiveInject(PdfCspPolicyService), ɵɵdirectiveInject(CSP_NONCE, 8));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _DynamicCssComponent,
@@ -2678,8 +2678,8 @@ var DynamicCssComponent = class _DynamicCssComponent {
   });
 })();
 var PdfAcroformDefaultThemeComponent = class _PdfAcroformDefaultThemeComponent {
-  static ɵfac = function PdfAcroformDefaultThemeComponent_Factory(ɵt) {
-    return new (ɵt || _PdfAcroformDefaultThemeComponent)();
+  static ɵfac = function PdfAcroformDefaultThemeComponent_Factory(t) {
+    return new (t || _PdfAcroformDefaultThemeComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfAcroformDefaultThemeComponent,
@@ -2706,8 +2706,8 @@ var PdfAcroformDefaultThemeComponent = class _PdfAcroformDefaultThemeComponent {
   }], null, null);
 })();
 var PdfContextMenuComponent = class _PdfContextMenuComponent {
-  static ɵfac = function PdfContextMenuComponent_Factory(ɵt) {
-    return new (ɵt || _PdfContextMenuComponent)();
+  static ɵfac = function PdfContextMenuComponent_Factory(t) {
+    return new (t || _PdfContextMenuComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfContextMenuComponent,
@@ -2736,8 +2736,8 @@ var PdfContextMenuComponent = class _PdfContextMenuComponent {
   }], null, null);
 })();
 var PdfDarkThemeComponent = class _PdfDarkThemeComponent {
-  static ɵfac = function PdfDarkThemeComponent_Factory(ɵt) {
-    return new (ɵt || _PdfDarkThemeComponent)();
+  static ɵfac = function PdfDarkThemeComponent_Factory(t) {
+    return new (t || _PdfDarkThemeComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfDarkThemeComponent,
@@ -2768,8 +2768,8 @@ var PdfAltTextDialogComponent = class _PdfAltTextDialogComponent {
   }
   ngOnInit() {
   }
-  static ɵfac = function PdfAltTextDialogComponent_Factory(ɵt) {
-    return new (ɵt || _PdfAltTextDialogComponent)();
+  static ɵfac = function PdfAltTextDialogComponent_Factory(t) {
+    return new (t || _PdfAltTextDialogComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfAltTextDialogComponent,
@@ -2824,8 +2824,8 @@ var PdfAltTextDialogComponent = class _PdfAltTextDialogComponent {
   }], () => [], null);
 })();
 var PdfDocumentPropertiesDialogComponent = class _PdfDocumentPropertiesDialogComponent {
-  static ɵfac = function PdfDocumentPropertiesDialogComponent_Factory(ɵt) {
-    return new (ɵt || _PdfDocumentPropertiesDialogComponent)();
+  static ɵfac = function PdfDocumentPropertiesDialogComponent_Factory(t) {
+    return new (t || _PdfDocumentPropertiesDialogComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfDocumentPropertiesDialogComponent,
@@ -2940,8 +2940,8 @@ var PdfDocumentPropertiesDialogComponent = class _PdfDocumentPropertiesDialogCom
   }], null, null);
 })();
 var PdfErrorMessageComponent = class _PdfErrorMessageComponent {
-  static ɵfac = function PdfErrorMessageComponent_Factory(ɵt) {
-    return new (ɵt || _PdfErrorMessageComponent)();
+  static ɵfac = function PdfErrorMessageComponent_Factory(t) {
+    return new (t || _PdfErrorMessageComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfErrorMessageComponent,
@@ -2979,8 +2979,8 @@ var PdfErrorMessageComponent = class _PdfErrorMessageComponent {
   }], null, null);
 })();
 var PdfFindbarMessageContainerComponent = class _PdfFindbarMessageContainerComponent {
-  static ɵfac = function PdfFindbarMessageContainerComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindbarMessageContainerComponent)();
+  static ɵfac = function PdfFindbarMessageContainerComponent_Factory(t) {
+    return new (t || _PdfFindbarMessageContainerComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindbarMessageContainerComponent,
@@ -3007,8 +3007,8 @@ var PdfFindbarMessageContainerComponent = class _PdfFindbarMessageContainerCompo
   }], null, null);
 })();
 var PdfFindEntireWordComponent = class _PdfFindEntireWordComponent {
-  static ɵfac = function PdfFindEntireWordComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindEntireWordComponent)();
+  static ɵfac = function PdfFindEntireWordComponent_Factory(t) {
+    return new (t || _PdfFindEntireWordComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindEntireWordComponent,
@@ -3036,8 +3036,8 @@ var PdfFindEntireWordComponent = class _PdfFindEntireWordComponent {
   }], null, null);
 })();
 var PdfFindHighlightAllComponent = class _PdfFindHighlightAllComponent {
-  static ɵfac = function PdfFindHighlightAllComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindHighlightAllComponent)();
+  static ɵfac = function PdfFindHighlightAllComponent_Factory(t) {
+    return new (t || _PdfFindHighlightAllComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindHighlightAllComponent,
@@ -3065,8 +3065,8 @@ var PdfFindHighlightAllComponent = class _PdfFindHighlightAllComponent {
   }], null, null);
 })();
 var PdfFindNextComponent = class _PdfFindNextComponent {
-  static ɵfac = function PdfFindNextComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindNextComponent)();
+  static ɵfac = function PdfFindNextComponent_Factory(t) {
+    return new (t || _PdfFindNextComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindNextComponent,
@@ -3101,8 +3101,8 @@ var PdfFindNextComponent = class _PdfFindNextComponent {
   }], null, null);
 })();
 var PdfFindPreviousComponent = class _PdfFindPreviousComponent {
-  static ɵfac = function PdfFindPreviousComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindPreviousComponent)();
+  static ɵfac = function PdfFindPreviousComponent_Factory(t) {
+    return new (t || _PdfFindPreviousComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindPreviousComponent,
@@ -3137,8 +3137,8 @@ var PdfFindPreviousComponent = class _PdfFindPreviousComponent {
   }], null, null);
 })();
 var PdfSearchInputFieldComponent = class _PdfSearchInputFieldComponent {
-  static ɵfac = function PdfSearchInputFieldComponent_Factory(ɵt) {
-    return new (ɵt || _PdfSearchInputFieldComponent)();
+  static ɵfac = function PdfSearchInputFieldComponent_Factory(t) {
+    return new (t || _PdfSearchInputFieldComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfSearchInputFieldComponent,
@@ -3183,8 +3183,8 @@ var PdfSearchInputFieldComponent = class _PdfSearchInputFieldComponent {
 })();
 var PdfFindInputAreaComponent = class _PdfFindInputAreaComponent {
   customFindbarInputArea;
-  static ɵfac = function PdfFindInputAreaComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindInputAreaComponent)();
+  static ɵfac = function PdfFindInputAreaComponent_Factory(t) {
+    return new (t || _PdfFindInputAreaComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindInputAreaComponent,
@@ -3223,8 +3223,8 @@ var PdfFindInputAreaComponent = class _PdfFindInputAreaComponent {
   });
 })();
 var PdfFindMatchCaseComponent = class _PdfFindMatchCaseComponent {
-  static ɵfac = function PdfFindMatchCaseComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindMatchCaseComponent)();
+  static ɵfac = function PdfFindMatchCaseComponent_Factory(t) {
+    return new (t || _PdfFindMatchCaseComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindMatchCaseComponent,
@@ -3252,8 +3252,8 @@ var PdfFindMatchCaseComponent = class _PdfFindMatchCaseComponent {
   }], null, null);
 })();
 var PdfFindResultsCountComponent = class _PdfFindResultsCountComponent {
-  static ɵfac = function PdfFindResultsCountComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindResultsCountComponent)();
+  static ɵfac = function PdfFindResultsCountComponent_Factory(t) {
+    return new (t || _PdfFindResultsCountComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindResultsCountComponent,
@@ -3280,8 +3280,8 @@ var PdfFindResultsCountComponent = class _PdfFindResultsCountComponent {
   }], null, null);
 })();
 var PdfMatchDiacriticsComponent = class _PdfMatchDiacriticsComponent {
-  static ɵfac = function PdfMatchDiacriticsComponent_Factory(ɵt) {
-    return new (ɵt || _PdfMatchDiacriticsComponent)();
+  static ɵfac = function PdfMatchDiacriticsComponent_Factory(t) {
+    return new (t || _PdfMatchDiacriticsComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfMatchDiacriticsComponent,
@@ -3328,8 +3328,8 @@ var PdfFindbarComponent = class _PdfFindbarComponent {
   showFindFuzzySearch = true;
   showFindResultsCount = true;
   showFindMessages = true;
-  static ɵfac = function PdfFindbarComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindbarComponent)();
+  static ɵfac = function PdfFindbarComponent_Factory(t) {
+    return new (t || _PdfFindbarComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindbarComponent,
@@ -3455,8 +3455,8 @@ var PdfFindbarComponent = class _PdfFindbarComponent {
   });
 })();
 var PdfLightThemeComponent = class _PdfLightThemeComponent {
-  static ɵfac = function PdfLightThemeComponent_Factory(ɵt) {
-    return new (ɵt || _PdfLightThemeComponent)();
+  static ɵfac = function PdfLightThemeComponent_Factory(t) {
+    return new (t || _PdfLightThemeComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfLightThemeComponent,
@@ -3483,8 +3483,8 @@ var PdfLightThemeComponent = class _PdfLightThemeComponent {
   }], null, null);
 })();
 var PdfPasswordDialogComponent = class _PdfPasswordDialogComponent {
-  static ɵfac = function PdfPasswordDialogComponent_Factory(ɵt) {
-    return new (ɵt || _PdfPasswordDialogComponent)();
+  static ɵfac = function PdfPasswordDialogComponent_Factory(t) {
+    return new (t || _PdfPasswordDialogComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfPasswordDialogComponent,
@@ -3521,8 +3521,8 @@ var PdfPasswordDialogComponent = class _PdfPasswordDialogComponent {
   }], null, null);
 })();
 var PdfPreparePrintingDialogComponent = class _PdfPreparePrintingDialogComponent {
-  static ɵfac = function PdfPreparePrintingDialogComponent_Factory(ɵt) {
-    return new (ɵt || _PdfPreparePrintingDialogComponent)();
+  static ɵfac = function PdfPreparePrintingDialogComponent_Factory(t) {
+    return new (t || _PdfPreparePrintingDialogComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfPreparePrintingDialogComponent,
@@ -3625,8 +3625,8 @@ var PdfShyButtonService = class _PdfShyButtonService {
       this.add(button);
     }
   }
-  static ɵfac = function PdfShyButtonService_Factory(ɵt) {
-    return new (ɵt || _PdfShyButtonService)(ɵɵinject(PDFNotificationService));
+  static ɵfac = function PdfShyButtonService_Factory(t) {
+    return new (t || _PdfShyButtonService)(ɵɵinject(PDFNotificationService));
   };
   static ɵprov = ɵɵdefineInjectable({
     token: _PdfShyButtonService,
@@ -3792,8 +3792,8 @@ var PdfSecondaryToolbarComponent = class _PdfSecondaryToolbarComponent {
       this.PDFViewerApplication?.secondaryToolbar.close();
     }
   }
-  static ɵfac = function PdfSecondaryToolbarComponent_Factory(ɵt) {
-    return new (ɵt || _PdfSecondaryToolbarComponent)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(PLATFORM_ID), ɵɵdirectiveInject(PdfShyButtonService), ɵɵdirectiveInject(NgxExtendedPdfViewerService));
+  static ɵfac = function PdfSecondaryToolbarComponent_Factory(t) {
+    return new (t || _PdfSecondaryToolbarComponent)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(PLATFORM_ID), ɵɵdirectiveInject(PdfShyButtonService), ɵɵdirectiveInject(NgxExtendedPdfViewerService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfSecondaryToolbarComponent,
@@ -4016,8 +4016,8 @@ var PdfSidebarContentComponent = class _PdfSidebarContentComponent {
       }
     });
   }
-  static ɵfac = function PdfSidebarContentComponent_Factory(ɵt) {
-    return new (ɵt || _PdfSidebarContentComponent)(ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfSidebarContentComponent_Factory(t) {
+    return new (t || _PdfSidebarContentComponent)(ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfSidebarContentComponent,
@@ -4097,8 +4097,8 @@ var PdfSidebarToolbarComponent = class _PdfSidebarToolbarComponent {
     const h = 32 * this.mobileFriendlyZoomScale;
     return `${h}px`;
   }
-  static ɵfac = function PdfSidebarToolbarComponent_Factory(ɵt) {
-    return new (ɵt || _PdfSidebarToolbarComponent)();
+  static ɵfac = function PdfSidebarToolbarComponent_Factory(t) {
+    return new (t || _PdfSidebarToolbarComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfSidebarToolbarComponent,
@@ -4212,8 +4212,8 @@ var PdfSidebarComponent = class _PdfSidebarComponent {
     this.hideSidebarToolbar = visible <= 1;
     this.ref.markForCheck();
   }
-  static ɵfac = function PdfSidebarComponent_Factory(ɵt) {
-    return new (ɵt || _PdfSidebarComponent)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfSidebarComponent_Factory(t) {
+    return new (t || _PdfSidebarComponent)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfSidebarComponent,
@@ -4434,8 +4434,8 @@ var PdfShyButtonComponent = class _PdfShyButtonComponent {
       }
     }
   }
-  static ɵfac = function PdfShyButtonComponent_Factory(ɵt) {
-    return new (ɵt || _PdfShyButtonComponent)(ɵɵdirectiveInject(PdfShyButtonService), ɵɵdirectiveInject(DomSanitizer), ɵɵdirectiveInject(Renderer2), ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfShyButtonComponent_Factory(t) {
+    return new (t || _PdfShyButtonComponent)(ɵɵdirectiveInject(PdfShyButtonService), ɵɵdirectiveInject(DomSanitizer), ɵɵdirectiveInject(Renderer2), ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfShyButtonComponent,
@@ -4564,8 +4564,8 @@ var PdfBookModeComponent = class _PdfBookModeComponent {
   ngOnDestroy() {
     this.onClick = void 0;
   }
-  static ɵfac = function PdfBookModeComponent_Factory(ɵt) {
-    return new (ɵt || _PdfBookModeComponent)();
+  static ɵfac = function PdfBookModeComponent_Factory(t) {
+    return new (t || _PdfBookModeComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfBookModeComponent,
@@ -4630,8 +4630,8 @@ var PdfBookModeComponent = class _PdfBookModeComponent {
 })();
 var PdfDocumentPropertiesComponent = class _PdfDocumentPropertiesComponent {
   show = true;
-  static ɵfac = function PdfDocumentPropertiesComponent_Factory(ɵt) {
-    return new (ɵt || _PdfDocumentPropertiesComponent)();
+  static ɵfac = function PdfDocumentPropertiesComponent_Factory(t) {
+    return new (t || _PdfDocumentPropertiesComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfDocumentPropertiesComponent,
@@ -4683,8 +4683,8 @@ var PdfDocumentPropertiesComponent = class _PdfDocumentPropertiesComponent {
 })();
 var PdfDownloadComponent = class _PdfDownloadComponent {
   showDownloadButton = true;
-  static ɵfac = function PdfDownloadComponent_Factory(ɵt) {
-    return new (ɵt || _PdfDownloadComponent)();
+  static ɵfac = function PdfDownloadComponent_Factory(t) {
+    return new (t || _PdfDownloadComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfDownloadComponent,
@@ -4765,8 +4765,8 @@ var PdfDrawEditorComponent = class _PdfDrawEditorComponent {
   onClick() {
     document.getElementById("editorInk")?.click();
   }
-  static ɵfac = function PdfDrawEditorComponent_Factory(ɵt) {
-    return new (ɵt || _PdfDrawEditorComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfDrawEditorComponent_Factory(t) {
+    return new (t || _PdfDrawEditorComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfDrawEditorComponent,
@@ -4850,8 +4850,8 @@ var PdfHighlightEditorComponent = class _PdfHighlightEditorComponent {
   onClick() {
     document.getElementById("editorHighlight")?.click();
   }
-  static ɵfac = function PdfHighlightEditorComponent_Factory(ɵt) {
-    return new (ɵt || _PdfHighlightEditorComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfHighlightEditorComponent_Factory(t) {
+    return new (t || _PdfHighlightEditorComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfHighlightEditorComponent,
@@ -4945,8 +4945,8 @@ var PdfStampEditorComponent = class _PdfStampEditorComponent {
     });
     element?.dispatchEvent(clickEvent);
   }
-  static ɵfac = function PdfStampEditorComponent_Factory(ɵt) {
-    return new (ɵt || _PdfStampEditorComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfStampEditorComponent_Factory(t) {
+    return new (t || _PdfStampEditorComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfStampEditorComponent,
@@ -5065,8 +5065,8 @@ var PdfTextEditorComponent = class _PdfTextEditorComponent {
   onClick() {
     document.getElementById("editorFreeText")?.click();
   }
-  static ɵfac = function PdfTextEditorComponent_Factory(ɵt) {
-    return new (ɵt || _PdfTextEditorComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfTextEditorComponent_Factory(t) {
+    return new (t || _PdfTextEditorComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfTextEditorComponent,
@@ -5126,8 +5126,8 @@ var PdfEditorComponent = class _PdfEditorComponent {
   showHighlightEditor = true;
   showTextEditor = true;
   showStampEditor = true;
-  static ɵfac = function PdfEditorComponent_Factory(ɵt) {
-    return new (ɵt || _PdfEditorComponent)();
+  static ɵfac = function PdfEditorComponent_Factory(t) {
+    return new (t || _PdfEditorComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfEditorComponent,
@@ -5208,8 +5208,8 @@ var PdfEvenSpreadComponent = class _PdfEvenSpreadComponent {
       this.PDFViewerApplication.pdfViewer.spreadMode = 2;
     }
   }
-  static ɵfac = function PdfEvenSpreadComponent_Factory(ɵt) {
-    return new (ɵt || _PdfEvenSpreadComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
+  static ɵfac = function PdfEvenSpreadComponent_Factory(t) {
+    return new (t || _PdfEvenSpreadComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfEvenSpreadComponent,
@@ -5289,8 +5289,8 @@ var PdfFindButtonComponent = class _PdfFindButtonComponent {
       PDFViewerApplication.findBar.open();
     }
   }
-  static ɵfac = function PdfFindButtonComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFindButtonComponent)(ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfFindButtonComponent_Factory(t) {
+    return new (t || _PdfFindButtonComponent)(ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFindButtonComponent,
@@ -5377,8 +5377,8 @@ var PdfHandToolComponent = class _PdfHandToolComponent {
       tool: PdfCursorTools.HAND
     });
   }
-  static ɵfac = function PdfHandToolComponent_Factory(ɵt) {
-    return new (ɵt || _PdfHandToolComponent)(ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfHandToolComponent_Factory(t) {
+    return new (t || _PdfHandToolComponent)(ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfHandToolComponent,
@@ -5483,8 +5483,8 @@ var PdfHorizontalScrollComponent = class _PdfHorizontalScrollComponent {
   ngOnDestroy() {
     this.onClick = void 0;
   }
-  static ɵfac = function PdfHorizontalScrollComponent_Factory(ɵt) {
-    return new (ɵt || _PdfHorizontalScrollComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
+  static ɵfac = function PdfHorizontalScrollComponent_Factory(t) {
+    return new (t || _PdfHorizontalScrollComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfHorizontalScrollComponent,
@@ -5587,8 +5587,8 @@ var PdfInfiniteScrollComponent = class _PdfInfiniteScrollComponent {
   ngOnDestroy() {
     this.onClick = void 0;
   }
-  static ɵfac = function PdfInfiniteScrollComponent_Factory(ɵt) {
-    return new (ɵt || _PdfInfiniteScrollComponent)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfInfiniteScrollComponent_Factory(t) {
+    return new (t || _PdfInfiniteScrollComponent)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfInfiniteScrollComponent,
@@ -5686,8 +5686,8 @@ var PdfNoSpreadComponent = class _PdfNoSpreadComponent {
       this.PDFViewerApplication.pdfViewer.spreadMode = 0;
     }
   }
-  static ɵfac = function PdfNoSpreadComponent_Factory(ɵt) {
-    return new (ɵt || _PdfNoSpreadComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
+  static ɵfac = function PdfNoSpreadComponent_Factory(t) {
+    return new (t || _PdfNoSpreadComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfNoSpreadComponent,
@@ -5777,8 +5777,8 @@ var PdfOddSpreadComponent = class _PdfOddSpreadComponent {
       this.PDFViewerApplication.pdfViewer.spreadMode = 1;
     }
   }
-  static ɵfac = function PdfOddSpreadComponent_Factory(ɵt) {
-    return new (ɵt || _PdfOddSpreadComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
+  static ɵfac = function PdfOddSpreadComponent_Factory(t) {
+    return new (t || _PdfOddSpreadComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfOddSpreadComponent,
@@ -5853,8 +5853,8 @@ var PdfOpenFileComponent = class _PdfOpenFileComponent {
       });
     }
   };
-  static ɵfac = function PdfOpenFileComponent_Factory(ɵt) {
-    return new (ɵt || _PdfOpenFileComponent)(ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfOpenFileComponent_Factory(t) {
+    return new (t || _PdfOpenFileComponent)(ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfOpenFileComponent,
@@ -5929,8 +5929,8 @@ var PdfFirstPageComponent = class _PdfFirstPageComponent {
     this.disableFirstPage = event.pageNumber <= 1;
     this.changeDetectorRef.markForCheck();
   }
-  static ɵfac = function PdfFirstPageComponent_Factory(ɵt) {
-    return new (ɵt || _PdfFirstPageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfFirstPageComponent_Factory(t) {
+    return new (t || _PdfFirstPageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfFirstPageComponent,
@@ -6017,8 +6017,8 @@ var PdfLastPageComponent = class _PdfLastPageComponent {
   lastPage() {
     this.PDFViewerApplication?.eventBus.dispatch("lastpage");
   }
-  static ɵfac = function PdfLastPageComponent_Factory(ɵt) {
-    return new (ɵt || _PdfLastPageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfLastPageComponent_Factory(t) {
+    return new (t || _PdfLastPageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfLastPageComponent,
@@ -6099,8 +6099,8 @@ var PdfNextPageComponent = class _PdfNextPageComponent {
     this.disableNextPage = event.pageNumber === event.pagesCount;
     this.changeDetectorRef.markForCheck();
   }
-  static ɵfac = function PdfNextPageComponent_Factory(ɵt) {
-    return new (ɵt || _PdfNextPageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfNextPageComponent_Factory(t) {
+    return new (t || _PdfNextPageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfNextPageComponent,
@@ -6159,8 +6159,8 @@ var PdfNextPageComponent = class _PdfNextPageComponent {
 var PdfPageNumberComponent = class _PdfPageNumberComponent {
   showPageNumber = true;
   showPageLabel = true;
-  static ɵfac = function PdfPageNumberComponent_Factory(ɵt) {
-    return new (ɵt || _PdfPageNumberComponent)();
+  static ɵfac = function PdfPageNumberComponent_Factory(t) {
+    return new (t || _PdfPageNumberComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfPageNumberComponent,
@@ -6243,8 +6243,8 @@ var PdfPreviousPageComponent = class _PdfPreviousPageComponent {
     this.disablePreviousPage = event.pageNumber <= 1;
     this.changeDetectorRef.markForCheck();
   }
-  static ɵfac = function PdfPreviousPageComponent_Factory(ɵt) {
-    return new (ɵt || _PdfPreviousPageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfPreviousPageComponent_Factory(t) {
+    return new (t || _PdfPreviousPageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfPreviousPageComponent,
@@ -6306,8 +6306,8 @@ var PdfPagingAreaComponent = class _PdfPagingAreaComponent {
   showPreviousAndNextPageButtons = true;
   showPageNumber = true;
   showPageLabel = true;
-  static ɵfac = function PdfPagingAreaComponent_Factory(ɵt) {
-    return new (ɵt || _PdfPagingAreaComponent)();
+  static ɵfac = function PdfPagingAreaComponent_Factory(t) {
+    return new (t || _PdfPagingAreaComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfPagingAreaComponent,
@@ -6397,8 +6397,8 @@ var PdfPagingAreaComponent = class _PdfPagingAreaComponent {
 })();
 var PdfPresentationModeComponent = class _PdfPresentationModeComponent {
   showPresentationModeButton = true;
-  static ɵfac = function PdfPresentationModeComponent_Factory(ɵt) {
-    return new (ɵt || _PdfPresentationModeComponent)();
+  static ɵfac = function PdfPresentationModeComponent_Factory(t) {
+    return new (t || _PdfPresentationModeComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfPresentationModeComponent,
@@ -6448,8 +6448,8 @@ var PdfPresentationModeComponent = class _PdfPresentationModeComponent {
 })();
 var PdfPrintComponent = class _PdfPrintComponent {
   showPrintButton = true;
-  static ɵfac = function PdfPrintComponent_Factory(ɵt) {
-    return new (ɵt || _PdfPrintComponent)();
+  static ɵfac = function PdfPrintComponent_Factory(t) {
+    return new (t || _PdfPrintComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfPrintComponent,
@@ -6525,8 +6525,8 @@ var PdfRotatePageCwComponent = class _PdfRotatePageCwComponent {
     this.disableRotate = event.pagesCount === 0;
     this.changeDetectorRef.markForCheck();
   }
-  static ɵfac = function PdfRotatePageCwComponent_Factory(ɵt) {
-    return new (ɵt || _PdfRotatePageCwComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfRotatePageCwComponent_Factory(t) {
+    return new (t || _PdfRotatePageCwComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfRotatePageCwComponent,
@@ -6619,8 +6619,8 @@ var PdfRotatePageCcwComponent = class _PdfRotatePageCcwComponent {
     this.disableRotate = event.pagesCount === 0;
     this.changeDetectorRef.markForCheck();
   }
-  static ɵfac = function PdfRotatePageCcwComponent_Factory(ɵt) {
-    return new (ɵt || _PdfRotatePageCcwComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfRotatePageCcwComponent_Factory(t) {
+    return new (t || _PdfRotatePageCcwComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfRotatePageCcwComponent,
@@ -6707,8 +6707,8 @@ var PdfSelectToolComponent = class _PdfSelectToolComponent {
       tool: PdfCursorTools.SELECT
     });
   }
-  static ɵfac = function PdfSelectToolComponent_Factory(ɵt) {
-    return new (ɵt || _PdfSelectToolComponent)(ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfSelectToolComponent_Factory(t) {
+    return new (t || _PdfSelectToolComponent)(ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfSelectToolComponent,
@@ -6800,8 +6800,8 @@ var PdfSinglePageModeComponent = class _PdfSinglePageModeComponent {
   ngOnDestroy() {
     this.onClick = void 0;
   }
-  static ɵfac = function PdfSinglePageModeComponent_Factory(ɵt) {
-    return new (ɵt || _PdfSinglePageModeComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
+  static ɵfac = function PdfSinglePageModeComponent_Factory(t) {
+    return new (t || _PdfSinglePageModeComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfSinglePageModeComponent,
@@ -6880,8 +6880,8 @@ var PdfToggleSecondaryToolbarComponent = class _PdfToggleSecondaryToolbarCompone
     event.preventDefault();
     return false;
   }
-  static ɵfac = function PdfToggleSecondaryToolbarComponent_Factory(ɵt) {
-    return new (ɵt || _PdfToggleSecondaryToolbarComponent)(ɵɵdirectiveInject(NgxExtendedPdfViewerService));
+  static ɵfac = function PdfToggleSecondaryToolbarComponent_Factory(t) {
+    return new (t || _PdfToggleSecondaryToolbarComponent)(ɵɵdirectiveInject(NgxExtendedPdfViewerService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfToggleSecondaryToolbarComponent,
@@ -6972,8 +6972,8 @@ var PdfToggleSidebarComponent = class _PdfToggleSidebarComponent {
   ngOnDestroy() {
     this.onClick = void 0;
   }
-  static ɵfac = function PdfToggleSidebarComponent_Factory(ɵt) {
-    return new (ɵt || _PdfToggleSidebarComponent)(ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfToggleSidebarComponent_Factory(t) {
+    return new (t || _PdfToggleSidebarComponent)(ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfToggleSidebarComponent,
@@ -7076,8 +7076,8 @@ var PdfVerticalScrollModeComponent = class _PdfVerticalScrollModeComponent {
   ngOnDestroy() {
     this.onClick = void 0;
   }
-  static ɵfac = function PdfVerticalScrollModeComponent_Factory(ɵt) {
-    return new (ɵt || _PdfVerticalScrollModeComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
+  static ɵfac = function PdfVerticalScrollModeComponent_Factory(t) {
+    return new (t || _PdfVerticalScrollModeComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfVerticalScrollModeComponent,
@@ -7186,8 +7186,8 @@ var PdfWrappedScrollModeComponent = class _PdfWrappedScrollModeComponent {
   ngOnDestroy() {
     this.onClick = void 0;
   }
-  static ɵfac = function PdfWrappedScrollModeComponent_Factory(ɵt) {
-    return new (ɵt || _PdfWrappedScrollModeComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
+  static ɵfac = function PdfWrappedScrollModeComponent_Factory(t) {
+    return new (t || _PdfWrappedScrollModeComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(NgZone));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfWrappedScrollModeComponent,
@@ -7296,8 +7296,8 @@ var PdfZoomDropdownComponent = class _PdfZoomDropdownComponent {
   snakeToCamel(str) {
     return str.replace(/([-_][a-z])/g, (group) => group.toUpperCase().replace("-", "").replace("_", ""));
   }
-  static ɵfac = function PdfZoomDropdownComponent_Factory(ɵt) {
-    return new (ɵt || _PdfZoomDropdownComponent)(ɵɵdirectiveInject(ElementRef));
+  static ɵfac = function PdfZoomDropdownComponent_Factory(t) {
+    return new (t || _PdfZoomDropdownComponent)(ɵɵdirectiveInject(ElementRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfZoomDropdownComponent,
@@ -7415,8 +7415,8 @@ var PdfZoomInComponent = class _PdfZoomInComponent {
     this.PDFViewerApplication?.eventBus.off("scalechanging", this.eventListener);
     this.PDFViewerApplication = void 0;
   }
-  static ɵfac = function PdfZoomInComponent_Factory(ɵt) {
-    return new (ɵt || _PdfZoomInComponent)(ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfZoomInComponent_Factory(t) {
+    return new (t || _PdfZoomInComponent)(ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfZoomInComponent,
@@ -7499,8 +7499,8 @@ var PdfZoomOutComponent = class _PdfZoomOutComponent {
     this.PDFViewerApplication?.eventBus.off("scalechanging", this.eventListener);
     this.PDFViewerApplication = void 0;
   }
-  static ɵfac = function PdfZoomOutComponent_Factory(ɵt) {
-    return new (ɵt || _PdfZoomOutComponent)(ɵɵdirectiveInject(PDFNotificationService));
+  static ɵfac = function PdfZoomOutComponent_Factory(t) {
+    return new (t || _PdfZoomOutComponent)(ɵɵdirectiveInject(PDFNotificationService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfZoomOutComponent,
@@ -7557,8 +7557,8 @@ var PdfZoomToolbarComponent = class _PdfZoomToolbarComponent {
   showZoomButtons = true;
   zoomLevels = ["auto", "page-actual", "page-fit", "page-width", 0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4];
   showZoomDropdown = true;
-  static ɵfac = function PdfZoomToolbarComponent_Factory(ɵt) {
-    return new (ɵt || _PdfZoomToolbarComponent)();
+  static ɵfac = function PdfZoomToolbarComponent_Factory(t) {
+    return new (t || _PdfZoomToolbarComponent)();
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfZoomToolbarComponent,
@@ -7675,8 +7675,8 @@ var PdfToolbarComponent = class _PdfToolbarComponent {
       this.pageViewMode = pageViewMode;
     }
   }
-  static ɵfac = function PdfToolbarComponent_Factory(ɵt) {
-    return new (ɵt || _PdfToolbarComponent)(ɵɵdirectiveInject(ElementRef));
+  static ɵfac = function PdfToolbarComponent_Factory(t) {
+    return new (t || _PdfToolbarComponent)(ɵɵdirectiveInject(ElementRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfToolbarComponent,
@@ -8014,8 +8014,8 @@ var TranslatePipe = class _TranslatePipe {
       return this.PDFViewerApplication?.l10n.get(key, null, englishText);
     });
   }
-  static ɵfac = function TranslatePipe_Factory(ɵt) {
-    return new (ɵt || _TranslatePipe)(ɵɵdirectiveInject(PDFNotificationService, 16));
+  static ɵfac = function TranslatePipe_Factory(t) {
+    return new (t || _TranslatePipe)(ɵɵdirectiveInject(PDFNotificationService, 16));
   };
   static ɵpipe = ɵɵdefinePipe({
     name: "translate",
@@ -9902,8 +9902,8 @@ var NgxExtendedPdfViewerComponent = class _NgxExtendedPdfViewerComponent {
     layers.forEach((layer) => layer.querySelectorAll("select").forEach((x) => x.disabled = this.disableForms));
     layers.forEach((layer) => layer.querySelectorAll("textarea").forEach((x) => x.disabled = this.disableForms));
   }
-  static ɵfac = function NgxExtendedPdfViewerComponent_Factory(ɵt) {
-    return new (ɵt || _NgxExtendedPdfViewerComponent)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(PLATFORM_ID), ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(PlatformLocation), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgxExtendedPdfViewerService), ɵɵdirectiveInject(Renderer2), ɵɵdirectiveInject(PDFScriptLoaderService), ɵɵdirectiveInject(NgxKeyboardManagerService));
+  static ɵfac = function NgxExtendedPdfViewerComponent_Factory(t) {
+    return new (t || _NgxExtendedPdfViewerComponent)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(PLATFORM_ID), ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(PlatformLocation), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgxExtendedPdfViewerService), ɵɵdirectiveInject(Renderer2), ɵɵdirectiveInject(PDFScriptLoaderService), ɵɵdirectiveInject(NgxKeyboardManagerService));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _NgxExtendedPdfViewerComponent,
@@ -10818,8 +10818,8 @@ var PdfRotatePageComponent = class _PdfRotatePageComponent {
     this.disableRotate = event.pagesCount === 0;
     this.changeDetectorRef.markForCheck();
   }
-  static ɵfac = function PdfRotatePageComponent_Factory(ɵt) {
-    return new (ɵt || _PdfRotatePageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
+  static ɵfac = function PdfRotatePageComponent_Factory(t) {
+    return new (t || _PdfRotatePageComponent)(ɵɵdirectiveInject(PDFNotificationService), ɵɵdirectiveInject(ChangeDetectorRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _PdfRotatePageComponent,
@@ -10906,8 +10906,8 @@ if (!Promise["allSettled"]) {
   }
 }
 var NgxExtendedPdfViewerModule = class _NgxExtendedPdfViewerModule {
-  static ɵfac = function NgxExtendedPdfViewerModule_Factory(ɵt) {
-    return new (ɵt || _NgxExtendedPdfViewerModule)();
+  static ɵfac = function NgxExtendedPdfViewerModule_Factory(t) {
+    return new (t || _NgxExtendedPdfViewerModule)();
   };
   static ɵmod = ɵɵdefineNgModule({
     type: _NgxExtendedPdfViewerModule,

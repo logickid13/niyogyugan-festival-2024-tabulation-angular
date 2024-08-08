@@ -1,13 +1,13 @@
 import {
   LoadingBarModule,
   LoadingBarService
-} from "./chunk-FQHISFSN.js";
+} from "./chunk-ZQYXR7FB.js";
 import {
   HTTP_INTERCEPTORS,
   HttpClientModule,
   HttpContextToken
-} from "./chunk-GC2WZBFU.js";
-import "./chunk-SA743QD5.js";
+} from "./chunk-A7N6XT46.js";
+import "./chunk-M3J7RHIA.js";
 import {
   Injectable,
   NgModule,
@@ -16,9 +16,9 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-DTF4Q2T2.js";
-import "./chunk-C5MXKN46.js";
+} from "./chunk-CVPNMULL.js";
 import "./chunk-P6V7QE56.js";
+import "./chunk-C5MXKN46.js";
 import {
   finalize,
   tap
@@ -53,8 +53,8 @@ var LoadingBarInterceptor = class {
     }), finalize(() => started && ref.complete()));
   }
 };
-LoadingBarInterceptor.ɵfac = function LoadingBarInterceptor_Factory(ɵt) {
-  return new (ɵt || LoadingBarInterceptor)(ɵɵinject(LoadingBarService));
+LoadingBarInterceptor.ɵfac = function LoadingBarInterceptor_Factory(t) {
+  return new (t || LoadingBarInterceptor)(ɵɵinject(LoadingBarService));
 };
 LoadingBarInterceptor.ɵprov = ɵɵdefineInjectable({
   token: LoadingBarInterceptor,
@@ -71,8 +71,8 @@ LoadingBarInterceptor.ɵprov = ɵɵdefineInjectable({
 })();
 var LoadingBarHttpClientModule = class {
 };
-LoadingBarHttpClientModule.ɵfac = function LoadingBarHttpClientModule_Factory(ɵt) {
-  return new (ɵt || LoadingBarHttpClientModule)();
+LoadingBarHttpClientModule.ɵfac = function LoadingBarHttpClientModule_Factory(t) {
+  return new (t || LoadingBarHttpClientModule)();
 };
 LoadingBarHttpClientModule.ɵmod = ɵɵdefineNgModule({
   type: LoadingBarHttpClientModule,

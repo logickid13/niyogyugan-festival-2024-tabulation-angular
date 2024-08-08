@@ -1,0 +1,37 @@
+<div class="flex flex-col items-center min-h-screen">
+    <img class="max-w-40 sm:max-w-46 md:max-w-60 lg:max-w-72 xl:max-w-72 h-auto" src="assets/float/float_logo.png" alt="Bida Ka sa Float Logo">
+
+    <div class="container p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 border-festive bg-white shadow-2xl rounded-lg">
+        <div class="text-center mb-6">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">FLOAT</h1>
+            <h1 class="text-lg sm:text-xl md:text-2xl font-medium text-gray-600 italic">(Tap to select)</h1>
+        </div>
+
+        <form [formGroup]="voterForm" novalidate>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-4">
+                <ng-container *ngFor="let checkbox of municipalitySelectionsSET; let i = index;" formArrayName="municipalitySelections">
+                    <div class="image-border bg-gray-200 p-4">
+                        <input class="form-checkbox hidden" type="checkbox" [formControlName]="i" id="checkbox-{{i}}">
+                        <label class="checkbox-image" for="checkbox-{{i}}">
+                            <img [src]="checkbox.reference" alt="Image {{checkbox.town}}" class="w-full h-auto object-cover rounded-lg">
+                        </label>
+                    </div>
+                </ng-container>
+            </div>
+            <!-- Display validation error message -->
+            <div *ngIf="getTownsFormArray.errors?.maxSelected" class="text-red-500 text-sm">
+                You can only select up to 3 municipalities.
+            </div>
+        </form>
+    </div>
+
+    <footer class="text-center text-gray-500 text-sm mt-20 mb-20">
+        &copy; 2024 Voting Event. All rights reserved.
+    </footer>
+
+    <button class="fixed bottom-0 left-0 right-0 bg-orange-500 text-white text-2xl px-4 py-3 shadow-lg 
+            hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300"  (click)="validateSelected()">
+        Confirm vote
+    </button>
+    
+</div>  

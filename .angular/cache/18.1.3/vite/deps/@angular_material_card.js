@@ -1,10 +1,10 @@
 import {
   MatCommonModule
-} from "./chunk-4N6YCZRJ.js";
-import "./chunk-NGW6MK4K.js";
+} from "./chunk-P5HRCXXD.js";
+import "./chunk-IZQXE5X5.js";
 import {
   CommonModule
-} from "./chunk-SA743QD5.js";
+} from "./chunk-M3J7RHIA.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -27,9 +27,9 @@ import {
   ɵɵelementStart,
   ɵɵprojection,
   ɵɵprojectionDef
-} from "./chunk-DTF4Q2T2.js";
-import "./chunk-C5MXKN46.js";
+} from "./chunk-CVPNMULL.js";
 import "./chunk-P6V7QE56.js";
+import "./chunk-C5MXKN46.js";
 import "./chunk-RRDUBJAB.js";
 import "./chunk-YNZI7GL3.js";
 
@@ -45,8 +45,8 @@ var _MatCard = class _MatCard {
     this.appearance = config?.appearance || "raised";
   }
 };
-_MatCard.ɵfac = function MatCard_Factory(ɵt) {
-  return new (ɵt || _MatCard)(ɵɵdirectiveInject(MAT_CARD_CONFIG, 8));
+_MatCard.ɵfac = function MatCard_Factory(t) {
+  return new (t || _MatCard)(ɵɵdirectiveInject(MAT_CARD_CONFIG, 8));
 };
 _MatCard.ɵcmp = ɵɵdefineComponent({
   type: _MatCard,
@@ -111,8 +111,8 @@ var MatCard = _MatCard;
 })();
 var _MatCardTitle = class _MatCardTitle {
 };
-_MatCardTitle.ɵfac = function MatCardTitle_Factory(ɵt) {
-  return new (ɵt || _MatCardTitle)();
+_MatCardTitle.ɵfac = function MatCardTitle_Factory(t) {
+  return new (t || _MatCardTitle)();
 };
 _MatCardTitle.ɵdir = ɵɵdefineDirective({
   type: _MatCardTitle,
@@ -135,8 +135,8 @@ var MatCardTitle = _MatCardTitle;
 })();
 var _MatCardTitleGroup = class _MatCardTitleGroup {
 };
-_MatCardTitleGroup.ɵfac = function MatCardTitleGroup_Factory(ɵt) {
-  return new (ɵt || _MatCardTitleGroup)();
+_MatCardTitleGroup.ɵfac = function MatCardTitleGroup_Factory(t) {
+  return new (t || _MatCardTitleGroup)();
 };
 _MatCardTitleGroup.ɵcmp = ɵɵdefineComponent({
   type: _MatCardTitleGroup,
@@ -178,8 +178,8 @@ var MatCardTitleGroup = _MatCardTitleGroup;
 })();
 var _MatCardContent = class _MatCardContent {
 };
-_MatCardContent.ɵfac = function MatCardContent_Factory(ɵt) {
-  return new (ɵt || _MatCardContent)();
+_MatCardContent.ɵfac = function MatCardContent_Factory(t) {
+  return new (t || _MatCardContent)();
 };
 _MatCardContent.ɵdir = ɵɵdefineDirective({
   type: _MatCardContent,
@@ -202,8 +202,8 @@ var MatCardContent = _MatCardContent;
 })();
 var _MatCardSubtitle = class _MatCardSubtitle {
 };
-_MatCardSubtitle.ɵfac = function MatCardSubtitle_Factory(ɵt) {
-  return new (ɵt || _MatCardSubtitle)();
+_MatCardSubtitle.ɵfac = function MatCardSubtitle_Factory(t) {
+  return new (t || _MatCardSubtitle)();
 };
 _MatCardSubtitle.ɵdir = ɵɵdefineDirective({
   type: _MatCardSubtitle,
@@ -229,8 +229,8 @@ var _MatCardActions = class _MatCardActions {
     this.align = "start";
   }
 };
-_MatCardActions.ɵfac = function MatCardActions_Factory(ɵt) {
-  return new (ɵt || _MatCardActions)();
+_MatCardActions.ɵfac = function MatCardActions_Factory(t) {
+  return new (t || _MatCardActions)();
 };
 _MatCardActions.ɵdir = ɵɵdefineDirective({
   type: _MatCardActions,
@@ -269,8 +269,8 @@ var MatCardActions = _MatCardActions;
 })();
 var _MatCardHeader = class _MatCardHeader {
 };
-_MatCardHeader.ɵfac = function MatCardHeader_Factory(ɵt) {
-  return new (ɵt || _MatCardHeader)();
+_MatCardHeader.ɵfac = function MatCardHeader_Factory(t) {
+  return new (t || _MatCardHeader)();
 };
 _MatCardHeader.ɵcmp = ɵɵdefineComponent({
   type: _MatCardHeader,
@@ -313,8 +313,8 @@ var MatCardHeader = _MatCardHeader;
 })();
 var _MatCardFooter = class _MatCardFooter {
 };
-_MatCardFooter.ɵfac = function MatCardFooter_Factory(ɵt) {
-  return new (ɵt || _MatCardFooter)();
+_MatCardFooter.ɵfac = function MatCardFooter_Factory(t) {
+  return new (t || _MatCardFooter)();
 };
 _MatCardFooter.ɵdir = ɵɵdefineDirective({
   type: _MatCardFooter,
@@ -337,8 +337,8 @@ var MatCardFooter = _MatCardFooter;
 })();
 var _MatCardImage = class _MatCardImage {
 };
-_MatCardImage.ɵfac = function MatCardImage_Factory(ɵt) {
-  return new (ɵt || _MatCardImage)();
+_MatCardImage.ɵfac = function MatCardImage_Factory(t) {
+  return new (t || _MatCardImage)();
 };
 _MatCardImage.ɵdir = ɵɵdefineDirective({
   type: _MatCardImage,
@@ -361,8 +361,8 @@ var MatCardImage = _MatCardImage;
 })();
 var _MatCardSmImage = class _MatCardSmImage {
 };
-_MatCardSmImage.ɵfac = function MatCardSmImage_Factory(ɵt) {
-  return new (ɵt || _MatCardSmImage)();
+_MatCardSmImage.ɵfac = function MatCardSmImage_Factory(t) {
+  return new (t || _MatCardSmImage)();
 };
 _MatCardSmImage.ɵdir = ɵɵdefineDirective({
   type: _MatCardSmImage,
@@ -385,8 +385,8 @@ var MatCardSmImage = _MatCardSmImage;
 })();
 var _MatCardMdImage = class _MatCardMdImage {
 };
-_MatCardMdImage.ɵfac = function MatCardMdImage_Factory(ɵt) {
-  return new (ɵt || _MatCardMdImage)();
+_MatCardMdImage.ɵfac = function MatCardMdImage_Factory(t) {
+  return new (t || _MatCardMdImage)();
 };
 _MatCardMdImage.ɵdir = ɵɵdefineDirective({
   type: _MatCardMdImage,
@@ -409,8 +409,8 @@ var MatCardMdImage = _MatCardMdImage;
 })();
 var _MatCardLgImage = class _MatCardLgImage {
 };
-_MatCardLgImage.ɵfac = function MatCardLgImage_Factory(ɵt) {
-  return new (ɵt || _MatCardLgImage)();
+_MatCardLgImage.ɵfac = function MatCardLgImage_Factory(t) {
+  return new (t || _MatCardLgImage)();
 };
 _MatCardLgImage.ɵdir = ɵɵdefineDirective({
   type: _MatCardLgImage,
@@ -433,8 +433,8 @@ var MatCardLgImage = _MatCardLgImage;
 })();
 var _MatCardXlImage = class _MatCardXlImage {
 };
-_MatCardXlImage.ɵfac = function MatCardXlImage_Factory(ɵt) {
-  return new (ɵt || _MatCardXlImage)();
+_MatCardXlImage.ɵfac = function MatCardXlImage_Factory(t) {
+  return new (t || _MatCardXlImage)();
 };
 _MatCardXlImage.ɵdir = ɵɵdefineDirective({
   type: _MatCardXlImage,
@@ -457,8 +457,8 @@ var MatCardXlImage = _MatCardXlImage;
 })();
 var _MatCardAvatar = class _MatCardAvatar {
 };
-_MatCardAvatar.ɵfac = function MatCardAvatar_Factory(ɵt) {
-  return new (ɵt || _MatCardAvatar)();
+_MatCardAvatar.ɵfac = function MatCardAvatar_Factory(t) {
+  return new (t || _MatCardAvatar)();
 };
 _MatCardAvatar.ɵdir = ɵɵdefineDirective({
   type: _MatCardAvatar,
@@ -482,8 +482,8 @@ var MatCardAvatar = _MatCardAvatar;
 var CARD_DIRECTIVES = [MatCard, MatCardActions, MatCardAvatar, MatCardContent, MatCardFooter, MatCardHeader, MatCardImage, MatCardLgImage, MatCardMdImage, MatCardSmImage, MatCardSubtitle, MatCardTitle, MatCardTitleGroup, MatCardXlImage];
 var _MatCardModule = class _MatCardModule {
 };
-_MatCardModule.ɵfac = function MatCardModule_Factory(ɵt) {
-  return new (ɵt || _MatCardModule)();
+_MatCardModule.ɵfac = function MatCardModule_Factory(t) {
+  return new (t || _MatCardModule)();
 };
 _MatCardModule.ɵmod = ɵɵdefineNgModule({
   type: _MatCardModule,

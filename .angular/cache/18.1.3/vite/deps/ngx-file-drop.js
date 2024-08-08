@@ -2,7 +2,7 @@ import {
   CommonModule,
   NgIf,
   NgTemplateOutlet
-} from "./chunk-SA743QD5.js";
+} from "./chunk-M3J7RHIA.js";
 import {
   Component,
   ContentChild,
@@ -43,9 +43,9 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵviewQuery
-} from "./chunk-DTF4Q2T2.js";
-import "./chunk-C5MXKN46.js";
+} from "./chunk-CVPNMULL.js";
 import "./chunk-P6V7QE56.js";
+import "./chunk-C5MXKN46.js";
 import {
   timer
 } from "./chunk-RRDUBJAB.js";
@@ -110,8 +110,8 @@ var _NgxFileDropContentTemplateDirective = class _NgxFileDropContentTemplateDire
     this.template = template;
   }
 };
-_NgxFileDropContentTemplateDirective.ɵfac = function NgxFileDropContentTemplateDirective_Factory(ɵt) {
-  return new (ɵt || _NgxFileDropContentTemplateDirective)(ɵɵdirectiveInject(TemplateRef));
+_NgxFileDropContentTemplateDirective.ɵfac = function NgxFileDropContentTemplateDirective_Factory(t) {
+  return new (t || _NgxFileDropContentTemplateDirective)(ɵɵdirectiveInject(TemplateRef));
 };
 _NgxFileDropContentTemplateDirective.ɵdir = ɵɵdefineDirective({
   type: _NgxFileDropContentTemplateDirective,
@@ -370,8 +370,8 @@ var _NgxFileDropComponent = class _NgxFileDropComponent {
     event.preventDefault();
   }
 };
-_NgxFileDropComponent.ɵfac = function NgxFileDropComponent_Factory(ɵt) {
-  return new (ɵt || _NgxFileDropComponent)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(Renderer2));
+_NgxFileDropComponent.ɵfac = function NgxFileDropComponent_Factory(t) {
+  return new (t || _NgxFileDropComponent)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(Renderer2));
 };
 _NgxFileDropComponent.ɵcmp = ɵɵdefineComponent({
   type: _NgxFileDropComponent,
@@ -531,8 +531,8 @@ var NgxFileDropComponent = _NgxFileDropComponent;
 })();
 var _NgxFileDropModule = class _NgxFileDropModule {
 };
-_NgxFileDropModule.ɵfac = function NgxFileDropModule_Factory(ɵt) {
-  return new (ɵt || _NgxFileDropModule)();
+_NgxFileDropModule.ɵfac = function NgxFileDropModule_Factory(t) {
+  return new (t || _NgxFileDropModule)();
 };
 _NgxFileDropModule.ɵmod = ɵɵdefineNgModule({
   type: _NgxFileDropModule,

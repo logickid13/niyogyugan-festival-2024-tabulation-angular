@@ -1,0 +1,128 @@
+@keyframes color-change {
+    0% { border-color: #ff007f; }
+    25% { border-color: #ff6600; }
+    50% { border-color: #33cc33; }
+    75% { border-color: #0066ff; }
+    100% { border-color: #ff007f; }
+}
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  // background: linear-gradient(to right, #fefcbf, #fcbfda, #c4a2ea);
+  background-image: url('../../../../public/assets/float/Background22.png') !important; 
+  background-repeat: no-repeat;
+  // background-color: #202f4e;
+  background-color: #222329;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  // border: 4px solid;
+  // animation: color-change 5s infinite;
+  // padding: 1rem;
+  // border-radius: 0.5rem;
+  // background: #ffffff;
+  background: rgb(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+.image-border {
+  border: 4px solid;
+  animation: color-change 5s infinite;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  // background: #ffffff;
+  background: rgb(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  width: 100%;
+}
+
+.btn-vote {
+  background: linear-gradient(45deg, #ff007f, #0066ff);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #ff007f, #00bfff);
+  }
+}
+
+/* Hide the native checkbox */
+.form-checkbox.hidden {
+  display: none;
+}
+
+// /* Style the label to look like an image */
+// .checkbox-image {
+//   display: inline-block;
+//   width: 100px; /* Set a fixed width for the image */
+//   height: 75px; /* Set a fixed height for the image */
+//   border-radius: 0.5rem; /* Match with your image border radius */
+//   cursor: pointer; /* Show a pointer cursor on hover */
+// }
+
+/* Add hover effects if needed */
+// .checkbox-image:hover {
+//   opacity: 0.7; /* Slightly dim the image on hover */
+// }
+
+.checkbox-image {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Ensure it fits the container width */
+  height: auto; /* Adjust height as needed */
+  cursor: pointer; /* Show pointer cursor on hover */
+  overflow: hidden; /* Hide overflow to ensure overlay doesn't go out of bounds */
+}
+
+/* Style for the image inside the label */
+.checkbox-image img {
+  display: block; /* Ensure the image fills the label */
+  width: 100%; /* Ensure the image fits the label */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0.5rem; /* Match with your image border radius */
+}
+
+/* Style for the overlay when the checkbox is checked */
+.form-checkbox:checked + .checkbox-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../../public/assets/float/float_logo.png') !important; /* Image overlay */
+  background-size: cover; /* Ensure the image covers the entire overlay */
+  background-position: center; /* Center the image within the overlay */
+  border-radius: 0.5rem; /* Match with your image border radius */
+  z-index: 1; /* Ensure overlay is above the image */
+  // opacity: 0.9; /* Adjust opacity as needed for visibility */
+}
+
+/* Ensure the label contents are above the overlay */
+.checkbox-image {
+  z-index: 0; /* Ensure label content is below the overlay */
+}
+
+/* Optionally, adjust the opacity of the image when checked */
+.form-checkbox:checked + .checkbox-image img {
+  opacity: 0.3; /* Slightly dim the image on checkbox checked */
+}
+
+  

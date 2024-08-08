@@ -1,10 +1,10 @@
 import {
   MatCommonModule
-} from "./chunk-4N6YCZRJ.js";
-import "./chunk-NGW6MK4K.js";
+} from "./chunk-P5HRCXXD.js";
+import "./chunk-IZQXE5X5.js";
 import {
   DOCUMENT
-} from "./chunk-SA743QD5.js";
+} from "./chunk-M3J7RHIA.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
@@ -39,9 +39,9 @@ import {
   ɵɵelementStart,
   ɵɵstyleProp,
   ɵɵtemplate
-} from "./chunk-DTF4Q2T2.js";
-import "./chunk-C5MXKN46.js";
+} from "./chunk-CVPNMULL.js";
 import "./chunk-P6V7QE56.js";
+import "./chunk-C5MXKN46.js";
 import "./chunk-RRDUBJAB.js";
 import "./chunk-YNZI7GL3.js";
 
@@ -160,8 +160,8 @@ var _MatProgressBar = class _MatProgressBar {
     return this.mode === "indeterminate" || this.mode === "query";
   }
 };
-_MatProgressBar.ɵfac = function MatProgressBar_Factory(ɵt) {
-  return new (ɵt || _MatProgressBar)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ANIMATION_MODULE_TYPE, 8), ɵɵdirectiveInject(MAT_PROGRESS_BAR_DEFAULT_OPTIONS, 8));
+_MatProgressBar.ɵfac = function MatProgressBar_Factory(t) {
+  return new (t || _MatProgressBar)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ANIMATION_MODULE_TYPE, 8), ɵɵdirectiveInject(MAT_PROGRESS_BAR_DEFAULT_OPTIONS, 8));
 };
 _MatProgressBar.ɵcmp = ɵɵdefineComponent({
   type: _MatProgressBar,
@@ -317,8 +317,8 @@ function clamp(v, min = 0, max = 100) {
 }
 var _MatProgressBarModule = class _MatProgressBarModule {
 };
-_MatProgressBarModule.ɵfac = function MatProgressBarModule_Factory(ɵt) {
-  return new (ɵt || _MatProgressBarModule)();
+_MatProgressBarModule.ɵfac = function MatProgressBarModule_Factory(t) {
+  return new (t || _MatProgressBarModule)();
 };
 _MatProgressBarModule.ɵmod = ɵɵdefineNgModule({
   type: _MatProgressBarModule,

@@ -1,18 +1,18 @@
 import {
   DomSanitizer
-} from "./chunk-WTVZWMCP.js";
-import "./chunk-GC2WZBFU.js";
+} from "./chunk-IYUTGFDY.js";
+import "./chunk-A7N6XT46.js";
 import {
   animate,
   state,
   style,
   transition,
   trigger
-} from "./chunk-YC5BN4TT.js";
+} from "./chunk-6P4UQWMP.js";
 import {
   DOCUMENT,
   NgIf
-} from "./chunk-SA743QD5.js";
+} from "./chunk-M3J7RHIA.js";
 import {
   ApplicationRef,
   ChangeDetectionStrategy,
@@ -61,9 +61,9 @@ import {
   ɵɵtemplate,
   ɵɵtext,
   ɵɵtextInterpolate1
-} from "./chunk-DTF4Q2T2.js";
-import "./chunk-C5MXKN46.js";
+} from "./chunk-CVPNMULL.js";
 import "./chunk-P6V7QE56.js";
+import "./chunk-C5MXKN46.js";
 import {
   Subject
 } from "./chunk-RRDUBJAB.js";
@@ -240,8 +240,8 @@ var ToastContainerDirective = class _ToastContainerDirective {
   getContainerElement() {
     return this.el.nativeElement;
   }
-  static ɵfac = function ToastContainerDirective_Factory(ɵt) {
-    return new (ɵt || _ToastContainerDirective)(ɵɵdirectiveInject(ElementRef));
+  static ɵfac = function ToastContainerDirective_Factory(t) {
+    return new (t || _ToastContainerDirective)(ɵɵdirectiveInject(ElementRef));
   };
   static ɵdir = ɵɵdefineDirective({
     type: _ToastContainerDirective,
@@ -534,8 +534,8 @@ var OverlayContainer = class _OverlayContainer {
     this._document.body.appendChild(container);
     this._containerElement = container;
   }
-  static ɵfac = function OverlayContainer_Factory(ɵt) {
-    return new (ɵt || _OverlayContainer)();
+  static ɵfac = function OverlayContainer_Factory(t) {
+    return new (t || _OverlayContainer)();
   };
   static ɵprov = ɵɵdefineInjectable({
     token: _OverlayContainer,
@@ -621,8 +621,8 @@ var Overlay = class _Overlay {
   _createOverlayRef(pane) {
     return new OverlayRef(this._createPortalHost(pane));
   }
-  static ɵfac = function Overlay_Factory(ɵt) {
-    return new (ɵt || _Overlay)();
+  static ɵfac = function Overlay_Factory(t) {
+    return new (t || _Overlay)();
   };
   static ɵprov = ɵɵdefineInjectable({
     token: _Overlay,
@@ -823,8 +823,8 @@ var ToastrService = class _ToastrService {
     this.toasts.push(ins);
     return ins;
   }
-  static ɵfac = function ToastrService_Factory(ɵt) {
-    return new (ɵt || _ToastrService)(ɵɵinject(TOAST_CONFIG), ɵɵinject(Overlay), ɵɵinject(Injector), ɵɵinject(DomSanitizer), ɵɵinject(NgZone));
+  static ɵfac = function ToastrService_Factory(t) {
+    return new (t || _ToastrService)(ɵɵinject(TOAST_CONFIG), ɵɵinject(Overlay), ɵɵinject(Injector), ɵɵinject(DomSanitizer), ɵɵinject(NgZone));
   };
   static ɵprov = ɵɵdefineInjectable({
     token: _ToastrService,
@@ -1039,8 +1039,8 @@ var Toast = class _Toast {
       func();
     }
   }
-  static ɵfac = function Toast_Factory(ɵt) {
-    return new (ɵt || _Toast)(ɵɵdirectiveInject(ToastrService), ɵɵdirectiveInject(ToastPackage), ɵɵdirectiveInject(NgZone));
+  static ɵfac = function Toast_Factory(t) {
+    return new (t || _Toast)(ɵɵdirectiveInject(ToastrService), ɵɵdirectiveInject(ToastPackage), ɵɵdirectiveInject(NgZone));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _Toast,
@@ -1186,8 +1186,8 @@ var ToastrModule = class _ToastrModule {
       providers: [provideToastr(config)]
     };
   }
-  static ɵfac = function ToastrModule_Factory(ɵt) {
-    return new (ɵt || _ToastrModule)();
+  static ɵfac = function ToastrModule_Factory(t) {
+    return new (t || _ToastrModule)();
   };
   static ɵmod = ɵɵdefineNgModule({
     type: _ToastrModule,
@@ -1218,8 +1218,8 @@ var ToastrComponentlessModule = class _ToastrComponentlessModule {
       }]
     };
   }
-  static ɵfac = function ToastrComponentlessModule_Factory(ɵt) {
-    return new (ɵt || _ToastrComponentlessModule)();
+  static ɵfac = function ToastrComponentlessModule_Factory(t) {
+    return new (t || _ToastrComponentlessModule)();
   };
   static ɵmod = ɵɵdefineNgModule({
     type: _ToastrComponentlessModule
@@ -1383,8 +1383,8 @@ var ToastNoAnimation = class _ToastNoAnimation {
       this.intervalId = setInterval(() => this.updateProgress(), 10);
     }
   }
-  static ɵfac = function ToastNoAnimation_Factory(ɵt) {
-    return new (ɵt || _ToastNoAnimation)(ɵɵdirectiveInject(ToastrService), ɵɵdirectiveInject(ToastPackage), ɵɵdirectiveInject(ApplicationRef));
+  static ɵfac = function ToastNoAnimation_Factory(t) {
+    return new (t || _ToastNoAnimation)(ɵɵdirectiveInject(ToastrService), ɵɵdirectiveInject(ToastPackage), ɵɵdirectiveInject(ApplicationRef));
   };
   static ɵcmp = ɵɵdefineComponent({
     type: _ToastNoAnimation,
@@ -1504,8 +1504,8 @@ var ToastNoAnimationModule = class _ToastNoAnimationModule {
       }]
     };
   }
-  static ɵfac = function ToastNoAnimationModule_Factory(ɵt) {
-    return new (ɵt || _ToastNoAnimationModule)();
+  static ɵfac = function ToastNoAnimationModule_Factory(t) {
+    return new (t || _ToastNoAnimationModule)();
   };
   static ɵmod = ɵɵdefineNgModule({
     type: _ToastNoAnimationModule,
