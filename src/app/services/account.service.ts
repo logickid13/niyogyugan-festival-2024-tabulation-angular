@@ -63,4 +63,32 @@ export class AccountService {
     )
   }
 
+  updateBasicInfo(basicInfo: UpdateBasicInfo): Observable<UpdateBasicInfo> {
+    return this.httpClient.post<UpdateBasicInfo>(API_URL+'accounts/updateBasicInfo', basicInfo, httpOptions)
+   .pipe(
+     catchError(this.handleError)
+   )
+  }
+
+  updateProfilePicture(formData: any): Observable<any> {
+    return this.httpClient.post<any>(API_URL+'accounts/updateProfilePic', formData)
+    .pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  updatePassword(updatePasswordData: UpdatePassword): Observable<UpdatePassword> {
+      return this.httpClient.post<UpdatePassword>(API_URL+'accounts/updatePassword', updatePasswordData, httpOptions)
+    .pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  unlockAccount(accountUsername: string): Observable<UnlockAccount> {
+    return this.httpClient.post<UnlockAccount>(API_URL+'accounts/unlock', { username: accountUsername }, httpOptions)
+   .pipe(
+     catchError(this.handleError)
+   )
+}
+
 }
