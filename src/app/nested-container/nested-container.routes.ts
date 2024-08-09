@@ -34,6 +34,10 @@ export const NESTED_CONTAINER_ROUTES: Routes = [
             {
                 path: "news",
                 loadComponent: () => import('./news/news.component').then(m => m.NewsComponent)
+            },
+            {
+                path: "bida",
+                loadComponent: () => import('./float-bida-ka-mechanics/float-bida-ka-mechanics.component').then(m => m.FloatBidaKaMechanicsComponent)
             }
         ]
     }
