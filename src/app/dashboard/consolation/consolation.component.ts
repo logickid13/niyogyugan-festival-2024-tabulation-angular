@@ -63,7 +63,7 @@ export class ConsolationComponent implements OnInit, OnDestroy {
       });
 
       this.appendForm = this.formBuilder.group({
-        municipality_name: [null, [Validators.required]],
+        municipality_name: [null],
         contest_name: [null, Validators.required],
         municipality_id: [null],
         contest_id: [null],
