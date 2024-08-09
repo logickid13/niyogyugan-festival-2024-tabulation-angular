@@ -18,7 +18,7 @@ export const routes: Routes = [
         loadChildren: () => import('../app/dashboard/dashboard.routes').then(m => m.DASHBOARD_ROUTES)
     },
     {
-        path: 'float-votes',
+        path: 'vote',
         component: FloatVotesComponent
     },
     {

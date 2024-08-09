@@ -46,6 +46,22 @@ export class FloatVotesChoicesComponent implements OnInit {
   
   public voterForm!: FormGroup;
 
+  countDownTime = {
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00'
+  };
+
+  private targetDate = new Date('August 16, 2024 08:00:00 GMT+0000').getTime();
+
+  targetDateStart = new Date('August 16, 2024 08:00:00 GMT+0000');
+  targetDateEnd   = new Date('August 17, 2024 16:00:00 GMT+0000');
+  currentDate     = new Date();
+  showCountdown: boolean = false;
+  showVoting:    boolean = false;
+  showStopped:   boolean = false;
+
   townsToKeep = [
     "POLILLO", "UNISAN", "CALAUAG", "ATIMONAN", "LUCBAN", "PANUKULAN",
     "CATANAUAN", "SAN FRANCISCO", "GENERAL LUNA", "ALABAT", "GUMACA",
@@ -65,7 +81,74 @@ export class FloatVotesChoicesComponent implements OnInit {
     public formBuilder: FormBuilder,
     private dialog: MatDialog,
     private snackBar: MatSnackBar
-  ) {}
+  ) {
+    this.updateDisplay();
+    setInterval(() => {
+      this.currentDate = new Date();
+      this.updateDisplay();
+    }, 1000); // Update every second
+
+    this.startCountdown();
+  }
+
+  private startCountdown(): void {
+    setInterval(() => {
+      this.updateCountdown();
+    }, 1000);
+  }
+
+  private updateCountdown(): void {
+    const now = new Date().getTime();
+    const timeDiff = this.targetDate - now;
+
+    if (timeDiff < 0) {
+      this.countDownTime = {
+        days: '00',
+        hours: '00',
+        minutes: '00',
+        seconds: '00'
+      };
+      return;
+    }
+
+    const days = Math.floor(timeDiff / (24 * 60 * 60 * 1000));
+    const hours = Math.floor((timeDiff % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDiff % (60 * 60 * 1000)) / (1000 * 60));
+    const seconds = Math.floor((timeDiff % (60 * 1000)) / 1000);
+
+    this.countDownTime = {
+      days: days < 10 ? `0${days}` : `${days}`,
+      hours: hours < 10 ? `0${hours}` : `${hours}`,
+      minutes: minutes < 10 ? `0${minutes}` : `${minutes}`,
+      seconds: seconds < 10 ? `0${seconds}` : `${seconds}`
+    };
+  }
+
+  updateDisplay(): void {
+    if (this.currentDate < this.targetDateStart) {
+      this.showCountdown = true;
+      this.showVoting = false;
+      this.showStopped = false;
+    } else if (this.currentDate >= this.targetDateStart && this.currentDate <= this.targetDateEnd) {
+      this.showCountdown = false;
+      this.showVoting = true;
+      this.showStopped = false;
+    } else {
+      this.showCountdown = false;
+      this.showVoting = false;
+      this.showStopped = true;
+    }
+  }
+
+  getCountdown(): string {
+    const timeDiff = this.targetDateStart.getTime() - this.currentDate.getTime();
+    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
   
   ngOnInit(): void {
     this.voterForm = this.formBuilder.group({
