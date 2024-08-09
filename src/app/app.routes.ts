@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
+import { FloatVotesComponent } from './nested-container/float-votes/float-votes.component';
+import { FloatVotesChoicesComponent } from './nested-container/float-votes-choices/float-votes-choices.component';
 
 export const routes: Routes = [
     {
@@ -14,6 +16,14 @@ export const routes: Routes = [
     {
         path: 'dashboard',
         loadChildren: () => import('../app/dashboard/dashboard.routes').then(m => m.DASHBOARD_ROUTES)
+    },
+    {
+        path: 'vote',
+        component: FloatVotesComponent
+    },
+    {
+        path: 'float-vote-choices',
+        component: FloatVotesChoicesComponent
     },
     {
         path: '**',

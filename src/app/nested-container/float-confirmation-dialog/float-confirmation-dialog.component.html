@@ -1,0 +1,141 @@
+
+<div *ngIf="paramData.action == 'vote_exceeded'">
+  <h1 mat-dialog-title>Warning</h1>
+  <div mat-dialog-content>
+    <p>Vote for three (3) floats only!</p>
+  </div>
+  <div mat-dialog-actions>
+    <!-- <button mat-button [mat-dialog-close]="true">Confirm</button> -->
+    <!-- <button mat-button [mat-dialog-close]="false">Close</button> -->
+    <button mat-button (click)="onNoClick()">Close</button>
+  </div>
+</div>
+
+<div *ngIf="paramData.action == 'vote_not_found'">
+  <h1 mat-dialog-title>Warning</h1>
+  <div mat-dialog-content>
+    <p>You have zero (0) float selected!<br><br>Select up to three (3) float before casting your vote.</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+  </div>
+</div>
+
+<div *ngIf="paramData.action == 'proceed'" class="w-full p-6 bg-white">
+  <form [formGroup]="voterForm" (ngSubmit)="onSubmit()" class="space-y-6">
+    
+    <!-- Title -->
+    <h1 class="text-xl font-semibold text-gray-900">Dialog Title</h1>
+    
+    <!-- Full Name Group -->
+    <fieldset class="border border-gray-300 p-4 rounded-md">
+      <legend class="text-lg font-medium mb-2">Personal Details</legend>
+        
+        <!-- Fullname -->
+        <div class="mb-5">
+          <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900">Fullname:</label>
+          <input id="fullname" formControlName="fullname" type="text"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="John Doe"
+            [ngClass]="{'border-green-500': getControl.fullname.valid && getControl.fullname.touched, 
+                        'border-red-500': getControl.fullname.invalid && (getControl.fullname.dirty || getControl.fullname.touched)}"
+            required>
+          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.fullname.invalid && (getControl.fullname.dirty || getControl.fullname.touched)">
+            <div *ngIf="getControl.fullname.errors?.['required']">
+              This field is required.
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-5">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email:</label>
+          <input id="email" formControlName="email" type="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="example@example.com"
+            [ngClass]="{'border-green-500': getControl.email.valid && getControl.email.touched, 
+                        'border-red-500': getControl.email.invalid && (getControl.email.dirty || getControl.email.touched)}"
+            required>
+          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.email.invalid && (getControl.email.dirty || getControl.email.touched)">
+            <div *ngIf="getControl.email.errors?.['required']">
+              This field is required.
+            </div>
+            <div *ngIf="getControl.email.errors?.['email']">
+              Please enter a valid email address.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Mobile Number -->
+        <div class="mb-5">
+          <label for="mobileno" class="block mb-2 text-sm font-medium text-gray-900">Mobile Number:</label>
+          <input id="mobileno" formControlName="mobileno" type="tel"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="09123456789"
+            [ngClass]="{'border-green-500': getControl.mobileno.valid && getControl.mobileno.touched, 
+                        'border-red-500': getControl.mobileno.invalid && (getControl.mobileno.dirty || getControl.mobileno.touched)}"
+            required>
+          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.mobileno.invalid && (getControl.mobileno.dirty || getControl.mobileno.touched)">
+            <div *ngIf="getControl.mobileno.errors?.['required']">
+              This field is required.
+            </div>
+          </div>
+        </div>
+    
+        <!-- Address -->
+        <div class="mb-5">
+          <label for="address" class="block mb-2 text-sm font-medium text-gray-900">Address:</label>
+          <input id="address" formControlName="address" type="text"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="123 Main St"
+            [ngClass]="{'border-green-500': getControl.address.valid && getControl.address.touched, 
+                        'border-red-500': getControl.address.invalid && (getControl.address.dirty || getControl.address.touched)}"
+            required>
+          <div class="text-red-500 text-sm mt-1" *ngIf="getControl.address.invalid && (getControl.address.dirty || getControl.address.touched)">
+            <div *ngIf="getControl.address.errors?.['required']">
+              This field is required.
+            </div>
+          </div>
+        </div>
+    </fieldset>
+
+    <!-- Facebook Field -->
+    <div class="mb-5">
+      <label for="facebook" class="block mb-2 text-sm font-medium text-gray-900">Facebook Profile URL:</label>
+      <input id="facebook" formControlName="facebook" type="url"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="https://facebook.com/yourprofile"
+        [ngClass]="{'border-green-500': getControl.facebook.valid && getControl.facebook.touched, 
+                    'border-red-500': getControl.facebook.invalid && (getControl.facebook.dirty || getControl.facebook.touched)}">
+      <div class="text-red-500 text-sm mt-1" *ngIf="getControl.facebook.invalid && (getControl.facebook.dirty || getControl.facebook.touched)">
+        <div *ngIf="getControl.facebook.errors?.['required']">
+          This field is required.
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms and Conditions -->
+    <div class="flex items-center mb-5">
+      <input id="agree_to_terms_and_conditions" type="checkbox"
+        formControlName="agree_to_terms_and_conditions"
+        class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300">
+      <label for="agree_to_terms_and_conditions" class="ml-2 text-sm font-medium text-gray-900">I agree to the terms and conditions</label>
+      <div class="text-red-500 text-sm mt-1" *ngIf="getControl.agree_to_terms_and_conditions.invalid && (getControl.agree_to_terms_and_conditions.dirty || getControl.agree_to_terms_and_conditions.touched)">
+        <div *ngIf="getControl.agree_to_terms_and_conditions.errors?.['required']">
+          You must agree to the terms and conditions.
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="flex space-x-4">
+      <button type="submit" [disabled]="!voterForm.valid"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+      <button type="button" (click)="onNoClick()"
+        class="text-gray-800 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Close</button>
+    </div>
+  </form>
+</div>
+
+
+
