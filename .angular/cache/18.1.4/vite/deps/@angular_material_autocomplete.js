@@ -24,9 +24,6 @@ import {
   trigger
 } from "./chunk-V4JSV7IJ.js";
 import {
-  NG_VALUE_ACCESSOR
-} from "./chunk-GBG5CJNB.js";
-import {
   ActiveDescendantKeyManager,
   DOWN_ARROW,
   Directionality,
@@ -53,6 +50,9 @@ import {
   Platform,
   _getEventTarget
 } from "./chunk-RWZPZYBG.js";
+import {
+  NG_VALUE_ACCESSOR
+} from "./chunk-GBG5CJNB.js";
 import {
   CommonModule,
   DOCUMENT

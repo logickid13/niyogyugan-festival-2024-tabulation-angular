@@ -6,6 +6,7 @@ import { throwError } from 'rxjs';
 import { environment } from '../../../environments/environment.development';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { ProgressBarMode, MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatButtonModule } from '@angular/material/button';
 
 const API_URL = environment.apiUrl;
 
@@ -15,7 +16,8 @@ const API_URL = environment.apiUrl;
   imports: [
     CommonModule,
     MatProgressBarModule,
-    LoadingBarHttpClientModule
+    LoadingBarHttpClientModule,
+    MatButtonModule
   ],
   templateUrl: './news.component.html',
   styleUrl: './news.component.scss'
@@ -25,6 +27,7 @@ export class NewsComponent implements OnInit {
   public news_list: News[] = [];
   public load_bar_mode:ProgressBarMode = 'indeterminate';
   public isLoading = true;
+  public img_url = API_URL+'files/news/';
 
   constructor(private newsService: NewsService) {}
 
@@ -33,15 +36,6 @@ export class NewsComponent implements OnInit {
       {
         next: (res) => {
           this.news_list = res;
-
-          this.news_list.map(el => {
-            let image_file = el.news_cover_img;
-            let final_url = API_URL+"public/files/news/"+image_file;
-            el.news_cover_img = final_url;
-          });
-
-          console.log(this.news_list);
-
         },
         complete: () => {
           this.isLoading = false;
