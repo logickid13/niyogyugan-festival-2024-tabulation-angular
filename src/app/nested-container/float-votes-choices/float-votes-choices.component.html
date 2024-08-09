@@ -1,20 +1,3 @@
-<!-- <div class="flex flex-col items-center min-h-screen" *ngIf="showCountdown">
-    <div class="container p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 border-festive bg-white shadow-2xl rounded-lg">
-        <h1 class="text-xl font-bold">Countdown to Voting Start</h1>
-        <p class="text-lg">{{ getCountdown() }}</p>
-    </div>
-</div> -->
-  
-<!-- <div *ngIf="showVoting" class="p-4 bg-yellow-200">
-    <h1 class="text-xl font-bold">Voting in Progress</h1>
-    <p class="text-lg">The voting period is open. You can cast your vote now!</p>
-</div> -->
-
-<!-- <div *ngIf="showStopped" class="p-4 bg-red-200">
-    <h1 class="text-xl font-bold">Voting Stopped</h1>
-    <p class="text-lg">The voting period has ended.</p>
-</div> -->
-
 <div class="flex flex-col items-center min-h-screen">
     <img class="max-w-40 sm:max-w-46 md:max-w-60 lg:max-w-72 xl:max-w-72 h-auto" src="assets/float/float_logo.png" alt="Bida Ka sa Float Logo">
 
@@ -74,10 +57,10 @@
             </div>
             </div>
         </div>
+        <a mat-raised-button color="primary" href="/about" class="mt-4 px-8 py-3 font-light rounded">Back to Home</a>
     </ng-container>
 
     <ng-container *ngIf="showVoting">
-    <!-- <ng-container> -->
         <div class="container p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 border-festive bg-white shadow-2xl rounded-lg">
             <div class="text-center mb-6">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800">FLOAT</h1>
@@ -95,10 +78,6 @@
                         </div>
                     </ng-container>
                 </div>
-                <!-- Display validation error message -->
-                <!-- <div *ngIf="getTownsFormArray.errors?.maxSelected" class="text-red-500 text-sm">
-                    You can only select up to 3 municipalities.
-                </div> -->
             </form>
         </div>
     
@@ -120,5 +99,4 @@
             </div>
         </div>
     </ng-container>
-    
 </div>  
