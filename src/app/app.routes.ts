@@ -3,6 +3,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { FloatVotesComponent } from './nested-container/float-votes/float-votes.component';
 import { FloatVotesChoicesComponent } from './nested-container/float-votes-choices/float-votes-choices.component';
+import { FloatBidaKaMechanicsComponent } from './nested-container/float-bida-ka-mechanics/float-bida-ka-mechanics.component';
 
 export const routes: Routes = [
     {
@@ -21,6 +22,10 @@ export const routes: Routes = [
         path: 'vote',
         component: FloatVotesComponent
     },
+    // {
+    //     path: 'bida',
+    //     component: FloatBidaKaMechanicsComponent
+    // },
     {
         path: 'float-vote-choices',
         component: FloatVotesChoicesComponent
