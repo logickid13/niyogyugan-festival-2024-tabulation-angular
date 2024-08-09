@@ -53,10 +53,10 @@ export class FloatVotesChoicesComponent implements OnInit {
     seconds: '00'
   };
 
-  private targetDate = new Date('August 16, 2024 08:00:00 GMT+0000').getTime();
+  private targetDate = new Date('August 16, 2024 08:00:00 GMT+8').getTime();
 
-  targetDateStart = new Date('August 16, 2024 08:00:00 GMT+0000');
-  targetDateEnd   = new Date('August 17, 2024 16:00:00 GMT+0000');
+  targetDateStart = new Date('August 16, 2024 08:00:00 GMT+8');
+  targetDateEnd   = new Date('August 17, 2024 16:00:00 GMT+8');
   currentDate     = new Date();
   showCountdown: boolean = false;
   showVoting:    boolean = false;
