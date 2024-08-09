@@ -1,0 +1,124 @@
+<!-- <div class="flex flex-col items-center min-h-screen" *ngIf="showCountdown">
+    <div class="container p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 border-festive bg-white shadow-2xl rounded-lg">
+        <h1 class="text-xl font-bold">Countdown to Voting Start</h1>
+        <p class="text-lg">{{ getCountdown() }}</p>
+    </div>
+</div> -->
+  
+<!-- <div *ngIf="showVoting" class="p-4 bg-yellow-200">
+    <h1 class="text-xl font-bold">Voting in Progress</h1>
+    <p class="text-lg">The voting period is open. You can cast your vote now!</p>
+</div> -->
+
+<!-- <div *ngIf="showStopped" class="p-4 bg-red-200">
+    <h1 class="text-xl font-bold">Voting Stopped</h1>
+    <p class="text-lg">The voting period has ended.</p>
+</div> -->
+
+<div class="flex flex-col items-center min-h-screen">
+    <img class="max-w-40 sm:max-w-46 md:max-w-60 lg:max-w-72 xl:max-w-72 h-auto" src="assets/float/float_logo.png" alt="Bida Ka sa Float Logo">
+
+    <ng-container *ngIf="showCountdown">
+        <div *ngIf="showCountdown" class="container p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 border-festive bg-white shadow-2xl rounded-lg">
+            <div class="text-center mb-6">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800">Countdown to Voting Start</h1>
+            </div>
+            <div class="flex justify-center gap-3 sm:gap-8">
+            <div class="flex flex-col gap-5 relative">
+                <div class="h-16 w-16 sm:w-32 sm:h-32 lg:w-40 lg:h-40 flex justify-between items-center bg-[#343650] rounded-lg">
+                <div class="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-[#191A24]"></div>
+                <span class="lg:text-7xl sm:text-6xl text-3xl font-semibold text-[#a5b4fc]">
+                    {{ countDownTime.days }}
+                </span>
+                <div class="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-[#191A24]"></div>
+                </div>
+                <span class="text-[#8486A9] text-xs sm:text-2xl text-center capitalize">
+                {{ countDownTime.days === '01' ? 'Day' : 'Days' }}
+                </span>
+            </div>
+            <div class="flex flex-col gap-5 relative">
+                <div class="h-16 w-16 sm:w-32 sm:h-32 lg:w-40 lg:h-40 flex justify-between items-center bg-[#343650] rounded-lg">
+                <div class="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-[#191A24]"></div>
+                <span class="lg:text-7xl sm:text-6xl text-3xl font-semibold text-[#a5b4fc]">
+                    {{ countDownTime.hours }}
+                </span>
+                <div class="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-[#191A24]"></div>
+                </div>
+                <span class="text-[#8486A9] text-xs sm:text-2xl text-center font-medium">
+                {{ countDownTime.hours === '01' ? 'Hour' : 'Hours' }}
+                </span>
+            </div>
+            <div class="flex flex-col gap-5 relative">
+                <div class="h-16 w-16 sm:w-32 sm:h-32 lg:w-40 lg:h-40 flex justify-between items-center bg-[#343650] rounded-lg">
+                <div class="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-[#191A24]"></div>
+                <span class="lg:text-7xl sm:text-6xl text-3xl font-semibold text-[#a5b4fc]">
+                    {{ countDownTime.minutes }}
+                </span>
+                <div class="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-[#191A24]"></div>
+                </div>
+                <span class="text-[#8486A9] text-xs sm:text-2xl text-center capitalize">
+                {{ countDownTime.minutes === '01' ? 'Minute' : 'Minutes' }}
+                </span>
+            </div>
+            <div class="flex flex-col gap-5 relative">
+                <div class="h-16 w-16 sm:w-32 sm:h-32 lg:w-40 lg:h-40 flex justify-between items-center bg-[#343650] rounded-lg">
+                <div class="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-[#191A24]"></div>
+                <span class="lg:text-7xl sm:text-6xl text-3xl font-semibold text-[#a5b4fc]">
+                    {{ countDownTime.seconds }}
+                </span>
+                <div class="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-[#191A24]"></div>
+                </div>
+                <span class="text-[#8486A9] text-xs sm:text-2xl text-center capitalize">
+                {{ countDownTime.seconds === '01' ? 'Second' : 'Seconds' }}
+                </span>
+            </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="showVoting">
+    <!-- <ng-container> -->
+        <div class="container p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 border-festive bg-white shadow-2xl rounded-lg">
+            <div class="text-center mb-6">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800">FLOAT</h1>
+                <p class="text-lg">The voting period is open. You can cast your vote now by tapping!</p>
+            </div>
+    
+            <form [formGroup]="voterForm" novalidate>
+                <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-4">
+                    <ng-container *ngFor="let checkbox of municipalitySelectionsSET; let i = index;" formArrayName="municipalitySelections">
+                        <div class="image-border bg-gray-200 p-4">
+                            <input class="form-checkbox hidden" type="checkbox" [formControlName]="i" id="checkbox-{{i}}">
+                            <label class="checkbox-image" for="checkbox-{{i}}">
+                                <img [src]="checkbox.reference" alt="Image {{checkbox.town}}" class="w-full h-auto object-cover rounded-lg">
+                            </label>
+                        </div>
+                    </ng-container>
+                </div>
+                <!-- Display validation error message -->
+                <!-- <div *ngIf="getTownsFormArray.errors?.maxSelected" class="text-red-500 text-sm">
+                    You can only select up to 3 municipalities.
+                </div> -->
+            </form>
+        </div>
+    
+        <footer class="text-center text-gray-500 text-sm mt-20 mb-20">
+            &copy; 2024 Voting Event. All rights reserved.
+        </footer>
+    
+        <button class="fixed bottom-0 left-0 right-0 bg-orange-500 text-white text-2xl px-4 py-3 shadow-lg 
+                hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300"  (click)="validateSelected()">
+            Confirm vote
+        </button>
+    </ng-container>
+
+    <ng-container *ngIf="showStopped">
+        <div class="container p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 border-festive bg-white shadow-2xl rounded-lg">
+            <div class="text-center mb-6">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800">Voting Stopped</h1>
+                <p class="text-lg">The voting period has ended.</p>
+            </div>
+        </div>
+    </ng-container>
+    
+</div>  
