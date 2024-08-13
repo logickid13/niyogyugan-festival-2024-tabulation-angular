@@ -57,7 +57,7 @@ export class FloatConfirmationDialogComponent {
       email: ["", [Validators.required, Validators.email]], // email
       mobileno: ["", [Validators.required, mobileNumberValidator()]], // max 11 numbers only
       address: ["", Validators.required],
-      facebook: ["", Validators.required],
+      facebook: ["no_need", Validators.required],
       municipalitySelections: this.formBuilder.array(this.paramData.votes),
       agree_to_terms_and_conditions: [false, checkboxRequiredValidator()]
     });
@@ -93,12 +93,12 @@ export class FloatConfirmationDialogComponent {
 
           if (status == 'fb_profile_has_record') {
             // this.dialogRef.close('fail');
-            this.snackBar.open('Facebook account has been recorded!', 'Close', {
+            this.snackBar.open('You already voted!', 'Close', {
               duration: 2000,
             });
           }else if(status == 'success'){
             this.dialogRef.close('success');
-            this.snackBar.open('Facebook account has been recorded!', 'Close', {
+            this.snackBar.open('Success!', 'Close', {
               duration: 2000,
             });
           }

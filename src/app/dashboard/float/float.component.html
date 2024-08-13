@@ -1,8 +1,10 @@
 <mat-toolbar color="primary">
     <span>Float</span>
     <span class="spacer"></span>
-    <button class="hover:border-b-2 border-indigo-500 text-base me-2" mat-button routerLink="current-ranking" routerLinkActive="active-link border-b-2 border-indigo-500">Current Standing</button>
-    <button class="hover:border-b-2 border-indigo-500 text-base" mat-button routerLink="list-of-voters" routerLinkActive="active-link border-b-2 border-indigo-500">List of Voters per Municipality</button>
+    <button class="hover:border-b-2 border-indigo-500 text-base me-2" mat-button routerLink="current-ranking" 
+        routerLinkActive="active-link border-b-2 border-indigo-500" *ngIf="current_permission.includes(6.01)">Current Ranking</button>
+    <button class="hover:border-b-2 border-indigo-500 text-base" mat-button routerLink="list-of-voters" 
+    routerLinkActive="active-link border-b-2 border-indigo-500" *ngIf="current_permission.includes(6.02)">List of Voters per Municipality</button>
 </mat-toolbar>
   
 <router-outlet></router-outlet>

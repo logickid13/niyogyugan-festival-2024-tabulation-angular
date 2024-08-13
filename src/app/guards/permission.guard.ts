@@ -47,6 +47,27 @@ export const permissionGuard: CanMatchFn = (route: Route, segments: UrlSegment[]
             router.navigate(['/login']);
           }
         break;
+        case "float":
+          if (account_permission.includes(6)) {
+            return true;
+          } else {
+            router.navigate(['/login']);
+          }
+        break;
+        case "current-ranking":
+          if (account_permission.includes(6.01)) {
+            return true;
+          } else {
+            router.navigate(['/login']);
+          }
+        break;
+        case "list-of-voters":
+          if (account_permission.includes(6.02)) {
+            return true;
+          } else {
+            router.navigate(['/login']);
+          }
+        break;
       }
 
       return false;

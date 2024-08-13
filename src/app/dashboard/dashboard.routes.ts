@@ -40,15 +40,15 @@ export const DASHBOARD_ROUTES: Routes = [
                     {
                         path: 'current-ranking',
                         loadComponent: () => import('../dashboard/float-current-standing-report/float-current-standing-report.component').then(m => m.FloatCurrentStandingReportComponent),
-                        // canMatch: [permissionGuard]
+                        canMatch: [permissionGuard]
                     },
                     {
                         path: 'list-of-voters',
                         loadComponent: () => import('../dashboard/float-list-of-voters-of-selected-town/float-list-of-voters-of-selected-town.component').then(m => m.FloatListOfVotersOfSelectedTownComponent),
-                        // canMatch: [permissionGuard]
+                        canMatch: [permissionGuard]
                     }
                 ],
-                // canMatch: [permissionGuard]
+                canMatch: [permissionGuard]
             }
         ]
     }
