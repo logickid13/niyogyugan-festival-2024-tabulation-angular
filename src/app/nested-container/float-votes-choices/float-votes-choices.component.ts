@@ -194,23 +194,35 @@ export class FloatVotesChoicesComponent implements OnInit {
   }
 
   openDialog(action: string, selectionArray: any[]): void {
-    // console.log(action);
-    // console.log(selectionArray);
-    
-    const dialogRef = this.dialog.open(FloatConfirmationDialogComponent, {
-      data: {
-        message: 'Are you sure you want to proceed?',
-        action: action,
-        votes: selectionArray
-      },
-      width: '500px',  // Set the width of the dialog
-      height: '800px', // Set the height of the dialog
-      panelClass: 'scrollable-dialog' // Add a custom CSS class
-    });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('Dialog closed with result:', result);
-    });
+    if (action == 'proceed') {
+      const dialogRef = this.dialog.open(FloatConfirmationDialogComponent, {
+        data: {
+          message: 'Are you sure you want to proceed?',
+          action: action,
+          votes: selectionArray
+        },
+        width: '500px',  // Set the width of the dialog
+        height: '800px', // Set the height of the dialog
+        panelClass: 'scrollable-dialog' // Add a custom CSS class
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('Dialog closed with result:', result);
+      });
+    }else{
+      const dialogRef = this.dialog.open(FloatConfirmationDialogComponent, {
+        data: {
+          message: 'Are you sure you want to proceed?',
+          action: action,
+          votes: selectionArray
+        },
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('Dialog closed with result:', result);
+      });
+    }
   }
 
   markFormGroupTouched(formGroup: FormGroup): void {

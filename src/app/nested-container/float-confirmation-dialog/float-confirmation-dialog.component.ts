@@ -13,6 +13,7 @@ import { MatTableModule } from '@angular/material/table';
 import { NewAccountComponent } from '../../dialog/new-account/new-account.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
+import { FloatService } from '../../services/float.service';
 
 @Component({
   selector: 'app-float-confirmation-dialog',
@@ -46,6 +47,7 @@ export class FloatConfirmationDialogComponent {
     public formBuilder: FormBuilder,
     private snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<FloatConfirmationDialogComponent>,
+    private floatService: FloatService,
     @Inject(MAT_DIALOG_DATA) public paramData: any
   ) {}
 
@@ -81,8 +83,37 @@ export class FloatConfirmationDialogComponent {
   }
 
   onSubmit(): void {
+    const formData = this.voterForm.value;
+    console.log(formData);
+    
     if (this.voterForm.valid) {
-      this.dialogRef.close(this.voterForm.value);
+      this.floatService.insertVote(formData).subscribe({
+        next: (res) => {
+          const status = res[0].status;
+
+          if (status == 'fb_profile_has_record') {
+            // this.dialogRef.close('fail');
+            this.snackBar.open('Facebook account has been recorded!', 'Close', {
+              duration: 2000,
+            });
+          }else if(status == 'success'){
+            this.dialogRef.close('success');
+            this.snackBar.open('Facebook account has been recorded!', 'Close', {
+              duration: 2000,
+            });
+          }
+          // console.log(res);
+          // this.dialogRef.close(this.voterForm.value);
+        },
+        error: (err) => {
+          if (err.status == 403) {
+            this.dialogRef.close('dialog closed!');
+            this.snackBar.open('Account Not Permitted', 'Close', {
+              duration: 2000,
+            });
+          }
+        }
+      });
     } else {
       this.markFormGroupTouched(this.voterForm);
       this.snackBar.open('Please fill out all required fields', 'Close', {
