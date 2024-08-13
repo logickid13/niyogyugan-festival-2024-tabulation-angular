@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Leaderboards, ContestScore } from '../models/leaderboards.model';
 import { environment } from '../../environments/environment.development';
+import { FloatStanding } from '../models/consolation.model';
 
 const API_URL = environment.apiUrl+'floatVotingManagment';
 
@@ -40,6 +41,24 @@ export class FloatService {
     .pipe(
      catchError(this.handleError)
     )
+  }
+
+  getRanking(): Observable<FloatStanding[]> {
+    return this.httpClient.get<FloatStanding[]>(API_URL+'/ranking', httpOptions)
+   .pipe(
+     catchError(this.handleError)
+   )
+  }
+
+  downloadVotersDataLink() {
+    return API_URL+'/votersData';
+  }
+
+  votersData(): Observable<FloatStanding[]> {
+    return this.httpClient.get<FloatStanding[]>(API_URL+'/votersData', httpOptions)
+   .pipe(
+     catchError(this.handleError)
+   )
   }
 
 }

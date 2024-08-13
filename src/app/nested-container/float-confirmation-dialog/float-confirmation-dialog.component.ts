@@ -54,8 +54,8 @@ export class FloatConfirmationDialogComponent {
   ngOnInit(): void {
     this.voterForm = this.formBuilder.group({
       fullname: ["", Validators.required],
-      email: ["", Validators.required],
-      mobileno: ["", Validators.required],
+      email: ["", [Validators.required, Validators.email]], // email
+      mobileno: ["", [Validators.required, mobileNumberValidator()]], // max 11 numbers only
       address: ["", Validators.required],
       facebook: ["", Validators.required],
       municipalitySelections: this.formBuilder.array(this.paramData.votes),
@@ -138,5 +138,12 @@ export function checkboxRequiredValidator(): ValidatorFn {
   return (control: AbstractControl): { [key: string]: boolean } | null => {
     // Return null if the control's value is true
     return control.value ? null : { 'checkboxRequired': true };
+  };
+}
+
+export function mobileNumberValidator(): ValidatorFn {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+    const isValid = /^[0-9]{11}$/.test(control.value);
+    return isValid ? null : { 'mobileNumberInvalid': { value: control.value } };
   };
 }

@@ -16,6 +16,16 @@ export interface Contests {
     c_name: string;
 }
 
+export interface FloatStanding {
+    town: string;
+    votes: number;
+}
+
+export interface VoterData {
+    town: string;
+    votes: number;
+  }
+
 export interface ContestsAutocomplete {
     c_id: string;
     c_name: string;

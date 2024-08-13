@@ -1,0 +1,40 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  /* Ensure the toolbar looks clean and organized */
+    mat-toolbar {
+    padding: 0 16px; /* Adjust padding as needed */
+  }
+  
+  /* Style for the buttons */
+  mat-toolbar .mat-button {
+    font-size: 14px; /* Adjust font size */
+    margin: 0 8px;   /* Space between buttons */
+    // border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Style for the primary button color */
+  mat-toolbar .mat-button.mat-button-base {
+    color: white; /* Text color */
+    background-color: transparent; /* Background color */
+  }
+  
+  /* Add hover effect */
+  mat-toolbar .mat-button.mat-button-base:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+  }
+  
+  /* Style for the active button */
+  .active-link {
+    font-weight: bold; /* Highlight active button text */
+    background-color: rgba(255, 255, 255, 0.3); /* Highlight background color */
+    // border-radius: 4px; /* Consistent border radius */
+  }  

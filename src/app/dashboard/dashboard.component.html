@@ -66,6 +66,11 @@
                     <mat-icon matListItemIcon>card_giftcard</mat-icon>
                     Consolation
                 </a>
+                <!-- <a mat-list-item [routerLink]="['/dashboard/float']" routerLinkActive="active-link" *ngIf="display_permission.includes(6)"> -->
+                <a mat-list-item [routerLink]="['/dashboard/float/current-ranking']" routerLinkActive="active-link" *ngIf="display_permission.includes(5)">
+                    <mat-icon matListItemIcon>directions_boat</mat-icon>
+                    Float
+                </a>
             </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

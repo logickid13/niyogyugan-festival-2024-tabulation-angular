@@ -8,6 +8,7 @@ import { provideHttpClient, withXsrfConfiguration, withInterceptors } from '@ang
 import { provideToastr } from 'ngx-toastr';
 import { csrfInterceptor } from './interceptors/csrf.interceptor';
 import { jwtInterceptor } from './interceptors/jwt.interceptor';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -29,6 +30,6 @@ export const appConfig: ApplicationConfig = {
     ),
     provideAnimationsAsync(),
     provideToastr(),
-    importProvidersFrom(LoadingBarHttpClientModule)
+    importProvidersFrom(LoadingBarHttpClientModule), provideCharts(withDefaultRegisterables())
   ]
 };

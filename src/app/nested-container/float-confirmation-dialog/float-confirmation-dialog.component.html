@@ -79,6 +79,9 @@
             <div *ngIf="getControl.mobileno.errors?.['required']">
               This field is required.
             </div>
+            <div *ngIf="getControl.mobileno.errors?.['mobileNumberInvalid']">
+              Mobile number must be exactly 11 digits.
+            </div>
           </div>
         </div>
     
