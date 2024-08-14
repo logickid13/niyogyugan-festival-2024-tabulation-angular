@@ -42,7 +42,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
   templateUrl: './float-votes-choices.component.html',
   styleUrl: './float-votes-choices.component.scss'
 })
-export class FloatVotesChoicesComponent implements OnInit {
+export class FloatVotesChoicesComponent implements OnInit, OnDestroy {
   
   public voterForm!: FormGroup;
 
@@ -80,7 +80,7 @@ export class FloatVotesChoicesComponent implements OnInit {
   constructor(
     public formBuilder: FormBuilder,
     private dialog: MatDialog,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
   ) {
     this.updateDisplay();
     setInterval(() => {
@@ -89,6 +89,12 @@ export class FloatVotesChoicesComponent implements OnInit {
     }, 1000); // Update every second
 
     this.startCountdown();
+  }
+
+  ngOnDestroy(): void {
+    if (this.townSubscription) {
+      this.townSubscription.unsubscribe();
+    }
   }
 
   private startCountdown(): void {
@@ -137,6 +143,7 @@ export class FloatVotesChoicesComponent implements OnInit {
       this.showCountdown = false;
       this.showVoting = false;
       this.showStopped = true;
+      this.reloadPage();
     }
   }
 
@@ -203,12 +210,15 @@ export class FloatVotesChoicesComponent implements OnInit {
           votes: selectionArray
         },
         width: '500px',  // Set the width of the dialog
-        height: '800px', // Set the height of the dialog
+        height: '650px', // Set the height of the dialog
         panelClass: 'scrollable-dialog' // Add a custom CSS class
       });
   
       dialogRef.afterClosed().subscribe(result => {
-        console.log('Dialog closed with result:', result);
+        if (result == 'success') {
+          this.reloadPageWithDelay();
+        }
+        // console.log('Dialog closed with result:', result);
       });
     }else{
       const dialogRef = this.dialog.open(FloatConfirmationDialogComponent, {
@@ -223,6 +233,17 @@ export class FloatVotesChoicesComponent implements OnInit {
         console.log('Dialog closed with result:', result);
       });
     }
+  }
+
+  reloadPage() {
+    window.location.reload();
+  }
+
+  reloadPageWithDelay() {
+    setTimeout(() => {
+      // Reloading the page after a delay
+      window.location.reload();
+    }, 3000); // Delay in milliseconds (e.g., 3000 ms = 3 seconds)
   }
 
   markFormGroupTouched(formGroup: FormGroup): void {
@@ -248,8 +269,6 @@ export class FloatVotesChoicesComponent implements OnInit {
       ...this.voterForm.value,
       permissions: checkboxControl.value.filter((value: any) => !!value),
     };
-
-    console.log(formValue);
   }
 
   selectionArray(){

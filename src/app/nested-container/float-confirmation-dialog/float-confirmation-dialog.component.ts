@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
@@ -14,6 +14,7 @@ import { NewAccountComponent } from '../../dialog/new-account/new-account.compon
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 import { FloatService } from '../../services/float.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-float-confirmation-dialog',
@@ -36,7 +37,7 @@ import { FloatService } from '../../services/float.service';
   templateUrl: './float-confirmation-dialog.component.html',
   styleUrl: './float-confirmation-dialog.component.scss'
 })
-export class FloatConfirmationDialogComponent {
+export class FloatConfirmationDialogComponent implements OnInit, OnDestroy {
 
   public voterForm!: FormGroup;
   formData: any;
@@ -48,6 +49,7 @@ export class FloatConfirmationDialogComponent {
     private snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<FloatConfirmationDialogComponent>,
     private floatService: FloatService,
+    public toastrService: ToastrService,
     @Inject(MAT_DIALOG_DATA) public paramData: any
   ) {}
 
@@ -92,14 +94,15 @@ export class FloatConfirmationDialogComponent {
           const status = res[0].status;
 
           if (status == 'fb_profile_has_record') {
-            // this.dialogRef.close('fail');
-            this.snackBar.open('You already voted!', 'Close', {
-              duration: 2000,
+            this.toastrService.warning('You already voted.', '', {
+              progressBar: true,
+              timeOut: 2000
             });
           }else if(status == 'success'){
             this.dialogRef.close('success');
-            this.snackBar.open('Success!', 'Close', {
-              duration: 2000,
+            this.toastrService.success('Your vote has been recorded', '', {
+              progressBar: true,
+              timeOut: 2000
             });
           }
         },
