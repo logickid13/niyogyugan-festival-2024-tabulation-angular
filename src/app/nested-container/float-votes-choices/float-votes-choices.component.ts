@@ -53,10 +53,10 @@ export class FloatVotesChoicesComponent implements OnInit, OnDestroy {
     seconds: '00'
   };
 
-  private targetDate = new Date('August 14, 2024 12:00:00 GMT+8').getTime();
+  private targetDate = new Date('August 16, 2024 08:00:00 GMT+8').getTime();
 
-  targetDateStart = new Date('August 14, 2024 12:00:00 GMT+8');
-  targetDateEnd   = new Date('August 14, 2024 12:10:00 GMT+8');
+  targetDateStart = new Date('August 16, 2024 08:00:00 GMT+8');
+  targetDateEnd   = new Date('August 17, 2024 16:10:00 GMT+8');
   currentDate     = new Date();
   showCountdown: boolean = false;
   showVoting:    boolean = false;
@@ -143,7 +143,6 @@ export class FloatVotesChoicesComponent implements OnInit, OnDestroy {
       this.showCountdown = false;
       this.showVoting = false;
       this.showStopped = true;
-      this.reloadPage();
     }
   }
 
