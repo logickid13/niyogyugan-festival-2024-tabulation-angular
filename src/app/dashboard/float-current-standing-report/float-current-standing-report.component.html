@@ -1,0 +1,17 @@
+<p>Ranking as of {{ today | date }}</p>
+
+<ngx-charts-bar-horizontal
+  [view]="[800, 600]"
+  [scheme]="festiveColorScheme"
+  [results]="barChartData"
+  [xAxis]="true"
+  [yAxis]="true"
+  [legend]="true"
+  [showGridLines]="true"
+  [animations]="true"
+  [xAxisLabel]="'Count'"
+  [yAxisLabel]="'Town'"
+  [showDataLabel]="true"
+  [barPadding]="10"
+  [roundDomains]="true">
+</ngx-charts-bar-horizontal>

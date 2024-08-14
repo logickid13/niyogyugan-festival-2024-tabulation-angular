@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { permissionGuard } from '../guards/permission.guard';
+import { FloatComponent } from './float/float.component';
 
 export const DASHBOARD_ROUTES: Routes = [
     {
@@ -30,6 +31,23 @@ export const DASHBOARD_ROUTES: Routes = [
             {
                 path: 'accounts',
                 loadComponent: () => import('../dashboard/accounts/accounts.component').then(m => m.AccountsComponent),
+                canMatch: [permissionGuard]
+            },
+            {
+                path: 'float',
+                loadComponent: () => import('../dashboard/float/float.component').then(m => m.FloatComponent),
+                children:[
+                    {
+                        path: 'current-ranking',
+                        loadComponent: () => import('../dashboard/float-current-standing-report/float-current-standing-report.component').then(m => m.FloatCurrentStandingReportComponent),
+                        canMatch: [permissionGuard]
+                    },
+                    {
+                        path: 'list-of-voters',
+                        loadComponent: () => import('../dashboard/float-list-of-voters-of-selected-town/float-list-of-voters-of-selected-town.component').then(m => m.FloatListOfVotersOfSelectedTownComponent),
+                        canMatch: [permissionGuard]
+                    }
+                ],
                 canMatch: [permissionGuard]
             }
         ]
