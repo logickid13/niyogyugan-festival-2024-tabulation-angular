@@ -102,8 +102,6 @@ export class FloatConfirmationDialogComponent {
               duration: 2000,
             });
           }
-          // console.log(res);
-          // this.dialogRef.close(this.voterForm.value);
         },
         error: (err) => {
           if (err.status == 403) {
