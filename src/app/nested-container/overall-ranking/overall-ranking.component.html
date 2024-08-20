@@ -11,7 +11,47 @@
                     <div class="grid grid-cols-4 justify-items-stretch py-1 px-10">
                         <div class="justify-self-start col-span-2 content-center">
                             <span class="rank-no-text text-left text-md lg:text-3xl xl:text-4xl mr-2">
-                                {{ i+1 }}
+                                <span *ngIf="i == 0">1</span>
+                                <span *ngIf="i == 1">2</span>
+                                <span *ngIf="i == 2">3</span>
+                                <span *ngIf="i == 3">&nbsp;&nbsp;</span>
+                                <span *ngIf="i == 4">4</span>
+                                <span *ngIf="i == 5">5</span>
+                                <span *ngIf="i == 6">6</span>
+                                <span *ngIf="i == 7">7</span>
+                                <span *ngIf="i == 8">8</span>
+                                <span *ngIf="i == 9">&nbsp;&nbsp;</span>
+                                <span *ngIf="i == 10">9</span>
+                                <span *ngIf="i == 11">10</span>
+                                <span *ngIf="i == 12">11</span>
+                                <span *ngIf="i == 13">12</span>
+                                <span *ngIf="i == 14">13</span>
+                                <span *ngIf="i == 15">&nbsp;&nbsp;&nbsp;</span>
+                                <span *ngIf="i == 16">14</span>
+                                <span *ngIf="i == 17">15</span>
+                                <span *ngIf="i == 18">16</span>
+                                <span *ngIf="i == 19">17</span>
+                                <span *ngIf="i == 20">18</span>
+                                <span *ngIf="i == 21">19</span>
+                                <span *ngIf="i == 22">20</span>
+                                <span *ngIf="i == 23">21</span>
+                                <span *ngIf="i == 24">22</span>
+                                <span *ngIf="i == 25">23</span>
+                                <span *ngIf="i == 26">24</span>
+                                <span *ngIf="i == 27">25</span>
+                                <span *ngIf="i == 28">26</span>
+                                <span *ngIf="i == 29">27</span>
+                                <span *ngIf="i == 30">28</span>
+                                <span *ngIf="i == 31">29</span>
+                                <span *ngIf="i == 32">30</span>
+                                <span *ngIf="i == 33">31</span>
+                                <span *ngIf="i == 34">&nbsp;&nbsp;&nbsp;</span>
+                                <span *ngIf="i == 35">32</span>
+                                <span *ngIf="i == 36">33</span>
+                                <span *ngIf="i == 37">34</span>
+                                <span *ngIf="i == 38">35</span>
+                                <span *ngIf="i == 39">36</span>
+                                <span *ngIf="i == 40">37</span>
                             </span>
                             <span class="rank-municipality-text text-md text-left lg:text-3xl xl:text-4xl mx-2">
                                 {{ item.municipality_name }}

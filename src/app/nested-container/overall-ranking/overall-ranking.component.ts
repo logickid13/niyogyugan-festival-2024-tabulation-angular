@@ -46,6 +46,27 @@ export class OverallRankingComponent implements OnInit, OnDestroy {
         {
           next: (res) => {
             this.leaderboards_list = res;
+
+            // // Create a map to track totals and their indices
+            //   const totalMap = new Map();
+            //   const duplicateIndices:any = [];
+
+            //   // Iterate over the data
+            //   this.leaderboards_list.forEach((item, index) => {
+            //       const total = item.total;
+            //       if (totalMap.has(total)) {
+            //           duplicateIndices.push(index);
+            //           duplicateIndices.push(totalMap.get(total)); // Push the index of the first occurrence
+            //       } else {
+            //           totalMap.set(total, index);
+            //       }
+            //   });
+
+            //   // Remove duplicates if needed
+            //   const uniqueIndices = [...new Set(duplicateIndices)];
+
+            //   console.log(uniqueIndices); // Output the indices with duplicate totals
+
           },
           complete: () => {
             this.isLoading = false;
